@@ -14,7 +14,7 @@ interface RoleBlurb {
 const roleBlurbs: RoleBlurb[] = [
   {
     title: "Engineering Manager",
-    blurb: "Engineering Manager to lead and grow a team of engineers delivering high-impact products — owning technical direction, execution quality, and team development.",
+    blurb: "Engineering Manager to lead and grow a team of engineers delivering high-impact products, owning technical direction, execution quality, and team development.",
     tier: "BUZZER BEATER",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -22,7 +22,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Software Engineer",
-    blurb: "6–7+ years of backend or full-stack engineering, preferably at fintech or payments. Demonstrated ownership, strong cross-functional instincts, and active AI tooling in their daily workflow — ideally from a Series B–D startup where they've shipped independently.",
+    blurb: "6–7+ years of backend or full-stack engineering experience with demonstrated ownership, strong cross-functional collaboration instincts, and active AI tooling integration in their daily workflow.",
     tier: "BUZZER BEATER",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -30,7 +30,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Data Engineer",
-    blurb: "4+ years owning data infrastructure end-to-end — ideally as a sole, founding, or lead DE at an early-stage startup — with hands-on Snowflake platform management.",
+    blurb: "Senior Data Engineer with 4+ years of experience owning data infrastructure end-to-end — ideally as a sole, founding, or lead DE at an early-stage startup — with hands-on Snowflake platform management.",
     tier: "BUZZER BEATER",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -38,7 +38,15 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Security Engineer",
-    blurb: "Implement application and data security controls across cloud infrastructure — embedding security into product development and compliance workflows.",
+    blurb: "Senior Security Engineer to implement application and data security controls across cloud infrastructure, embedding security into product development and compliance workflows.",
+    tier: "BUZZER BEATER",
+    tierColor: "text-neon-orange",
+    tierBorderHex: "rgba(255,107,43,0.2)",
+    tierAccentRgb: "255,107,43",
+  },
+  {
+    title: "Senior SRE",
+    blurb: "Hands-on infrastructure engineer who can improve observability, incident response, CI/CD, and AWS reliability as January's production systems scale.",
     tier: "BUZZER BEATER",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -46,7 +54,15 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Staff Product Manager (AI Agents)",
-    blurb: "Staff PM to architect and ship production-grade AI agent platforms — owning strategy, quality, and performance across complex workflows.",
+    blurb: "Staff PM to architect and ship production-grade AI agent platforms, owning strategy, quality, and performance across complex workflows.",
+    tier: "SLAM DUNK",
+    tierColor: "text-[#5B8DEF]",
+    tierBorderHex: "rgba(91,141,239,0.25)",
+    tierAccentRgb: "91,141,239",
+  },
+  {
+    title: "Senior Product Manager",
+    blurb: "Staff PM to architect and ship production-grade AI agent platforms, owning strategy, quality, and performance across complex workflows.",
     tier: "SLAM DUNK",
     tierColor: "text-[#5B8DEF]",
     tierBorderHex: "rgba(91,141,239,0.25)",
@@ -54,7 +70,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Software Engineer (Mid-Level)",
-    blurb: "3+ years of backend or full-stack engineering, preferably at fintech or payments. Demonstrated ownership, strong cross-functional instincts, and active AI tooling in their daily workflow — ideally from a Series B–D startup.",
+    blurb: "3+ years of backend or full-stack engineering experience with demonstrated ownership, strong cross-functional collaboration instincts, and active AI tooling integration in their daily workflow.",
     tier: "SLAM DUNK",
     tierColor: "text-[#5B8DEF]",
     tierBorderHex: "rgba(91,141,239,0.25)",
@@ -62,7 +78,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Data Scientist (Product Analytics)",
-    blurb: "Data-driven product analyst to surface insights that shape product direction and drive growth.",
+    blurb: "Product-focused data scientist to partner with PMs on experimentation, KPI analysis, and modeling, turning data into decisions that shape product direction and user outcomes.",
     tier: "SLAM DUNK",
     tierColor: "text-[#5B8DEF]",
     tierBorderHex: "rgba(91,141,239,0.25)",
@@ -70,7 +86,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Recruiter",
-    blurb: "A data-driven recruiter with 5+ years in fast-growing startups — someone who lives and breathes recruiting excellence, lets the metrics tell the story, and drives change.",
+    blurb: "A data-driven recruiter with 5+ years of experience in fast-growing startups who lives and breathes recruiting excellence, lets the metrics tell the story, and drives change.",
     tier: "FAST BREAK",
     tierColor: "text-neon-yellow",
     tierBorderHex: "rgba(255,215,0,0.2)",
@@ -93,8 +109,16 @@ const roleBlurbs: RoleBlurb[] = [
     tierAccentRgb: "255,215,0",
   },
   {
+    title: "Senior Client Strategy Manager",
+    blurb: "Strategic client leader to own 5–7 enterprise accounts, turn client feedback into product and expansion insights, and build scalable account management systems without losing the personal touch.",
+    tier: "FAST BREAK",
+    tierColor: "text-neon-yellow",
+    tierBorderHex: "rgba(255,215,0,0.2)",
+    tierAccentRgb: "255,215,0",
+  },
+  {
     title: "Analyst (Client Ops)",
-    blurb: "Analytical thinker to support client operations with data-driven insights and process improvement.",
+    blurb: "Technical client ops analyst with strong SQL and workflow-debugging skills to investigate data issues, resolve client requests end-to-end, and reduce operational toil through process improvements.",
     tier: "FAST BREAK",
     tierColor: "text-neon-yellow",
     tierBorderHex: "rgba(255,215,0,0.2)",
@@ -102,7 +126,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Business Ops Associate",
-    blurb: "Operational generalist to drive cross-functional projects and improve internal systems at scale.",
+    blurb: "High-leverage bizops builder who spots root-cause operational friction, drives ambiguous cross-functional projects, and implements scalable systems that make teams faster and more autonomous.",
     tier: "FAST BREAK",
     tierColor: "text-neon-yellow",
     tierBorderHex: "rgba(255,215,0,0.2)",
@@ -110,7 +134,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Senior Manager of Marketing",
-    blurb: "Marketing leader to own brand, demand gen, and growth strategy for a fast-scaling fintech.",
+    blurb: "Enterprise B2B marketer to build January's GTM engine from scratch, driving measurable pipeline through ABM, events, positioning, and sales-enablement programs.",
     tier: "FAST BREAK",
     tierColor: "text-neon-yellow",
     tierBorderHex: "rgba(255,215,0,0.2)",
