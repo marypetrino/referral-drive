@@ -5,6 +5,10 @@ import { useState } from "react";
 
 const faqs: { q: string; a: string }[] = [
   {
+    q: "Who counts as a referral?",
+    a: "A referral is someone you have a direct personal or professional connection to — a former coworker, classmate, friend, someone you've met at an event or through a mutual connection. The key test: could you write a sentence or two about why this person is worth talking to?\n\nSimply put: We're looking for warm intros from your actual network, not lead gen. Candidates who simply submit a general application through a referral link don't count.",
+  },
+  {
     q: "Who is eligible to participate?",
     a: "All January employees are eligible to participate except: VPs and above, Talent team members, and hiring managers referring for their own roles. Internal candidates are also not bonus-eligible.",
   },
