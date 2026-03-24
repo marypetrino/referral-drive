@@ -211,13 +211,13 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
   // Block toggles
   const [subjectOn, setSubjectOn] = useState(true);
   const [openerOn, setOpenerOn] = useState(true);
-  const [pitchOn, setPitchOn] = useState(true);
+  const [pitchMissionOn, setPitchMissionOn] = useState(true);
+  const [pitchTractionOn, setPitchTractionOn] = useState(true);
   const [ctaOn, setCtaOn] = useState(true);
 
   // Block variants
   const [subjectVar, setSubjectVar] = useState<"a" | "b">("a");
   const [openerVar, setOpenerVar] = useState<"a" | "b">("a");
-  const [pitchVar, setPitchVar] = useState<"a" | "b">("a");
   const [ctaVar, setCtaVar] = useState<"a" | "b">("a");
 
   // Text template
@@ -239,7 +239,8 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
 
     const parts: string[] = [];
     if (openerOn) parts.push(fill(OPENERS[openerVar], inputs));
-    if (pitchOn) parts.push(fill(COMPANY_PITCH[pitchVar], inputs));
+    if (pitchMissionOn) parts.push(fill(COMPANY_PITCH.a, inputs));
+    if (pitchTractionOn) parts.push(fill(COMPANY_PITCH.b, inputs));
     if (ctaOn) parts.push(fill(CTAS[ctaVar], inputs));
 
     // Sign off
@@ -247,7 +248,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
     parts.push(name);
 
     return parts.join("\n\n");
-  }, [channel, inputs, openerOn, openerVar, pitchOn, pitchVar, ctaOn, ctaVar, textVar]);
+  }, [channel, inputs, openerOn, openerVar, pitchMissionOn, pitchTractionOn, ctaOn, ctaVar, textVar]);
 
   const subjectLine = useMemo(() => {
     if (channel === "email" && subjectOn) {
@@ -384,17 +385,13 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                     ]}
                   />
 
-                  <BlockRow
-                    label="Company Pitch"
-                    enabled={pitchOn}
-                    onToggle={setPitchOn}
-                    dropdownValue={pitchVar}
-                    onDropdownChange={(v) => setPitchVar(v as "a" | "b")}
-                    options={[
-                      { value: "a", label: "Mission + Problem" },
-                      { value: "b", label: "Traction-Led" },
-                    ]}
-                  />
+                  <div className="flex items-center justify-between py-2 border-b border-white/5">
+                    <Toggle label="Company Pitch (Mission)" checked={pitchMissionOn} onChange={setPitchMissionOn} />
+                  </div>
+
+                  <div className="flex items-center justify-between py-2 border-b border-white/5">
+                    <Toggle label="Company Pitch (Traction)" checked={pitchTractionOn} onChange={setPitchTractionOn} />
+                  </div>
 
                   <BlockRow
                     label="Call to Action"
