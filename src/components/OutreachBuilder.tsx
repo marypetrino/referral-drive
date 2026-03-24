@@ -57,6 +57,27 @@ function HighlightedText({ text }: { text: string }) {
   );
 }
 
+// ─── Role options ─────────────────────────────────────────────────────────────
+
+const ROLE_OPTIONS = [
+  "Analyst, Client Operations",
+  "Client Operations Manager",
+  "Senior Business Operations Associate",
+  "Senior Client Strategy Manager",
+  "Senior Implementation Consultant",
+  "Engineering Manager",
+  "Senior Security Engineer",
+  "Senior Software Engineer",
+  "Senior SRE, Software Engineering",
+  "Software Engineer",
+  "Associate General Counsel - Product & Regulatory",
+  "Senior Manager of Marketing",
+  "Senior Recruiter",
+  "Senior Data Engineer",
+  "Senior Data Scientist, Product Analytics",
+  "Senior/Staff Product Manager, AI Agents",
+];
+
 // ─── Copy blocks ──────────────────────────────────────────────────────────────
 
 const SUBJECT_LINES = {
@@ -184,7 +205,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
   // Block toggles
   const [subjectOn, setSubjectOn] = useState(true);
   const [openerOn, setOpenerOn] = useState(true);
-  const [pitchOn, setPitchOn] = useState(false); // defaults OFF
+  const [pitchOn, setPitchOn] = useState(true);
   const [ctaOn, setCtaOn] = useState(true);
 
   // Block variants
@@ -277,6 +298,11 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
           ))}
         </div>
 
+        {/* Helper text */}
+        <div className="px-6 py-2.5 bg-january-blue/5 border-b border-january-blue/10">
+          <p className="text-white/40 text-[11px] leading-relaxed">Use the copy buttons to grab your subject line and message, then paste and edit however you&apos;d like before sending.</p>
+        </div>
+
         {/* Body — two columns */}
         <div className="flex-1 overflow-y-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-january-blue/10 min-h-[400px]">
@@ -303,12 +329,19 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                   onChange={(v) => updateInput("candidateCompany", v)}
                   placeholder="e.g. Stripe"
                 />
-                <InputField
-                  label="Role Title"
-                  value={inputs.roleTitle}
-                  onChange={(v) => updateInput("roleTitle", v)}
-                  placeholder="e.g. Senior Software Engineer"
-                />
+                <div>
+                  <label className="block text-white/70 text-xs font-medium mb-1">Role Title</label>
+                  <select
+                    value={inputs.roleTitle}
+                    onChange={(e) => updateInput("roleTitle", e.target.value)}
+                    className="w-full px-3 py-2 bg-arcade-dark border border-january-blue/25 rounded-lg text-white text-sm focus:outline-none focus:border-january-blue/60 appearance-none"
+                  >
+                    <option value="" className="text-white/40">Select a role…</option>
+                    {ROLE_OPTIONS.map((role) => (
+                      <option key={role} value={role}>{role}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               {/* Modular blocks — only for email and linkedin */}
