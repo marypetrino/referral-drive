@@ -31,8 +31,8 @@ const milestones: {
     type: "race" as const,
     prizeLabel: "CHOOSE ONE",
     options: [
-      "AirPod Pros",
-      "Kindle",
+      "AirPods Pro",
+      "Kindle Colorsoft",
       "Oura Ring",
     ],
   },
@@ -43,7 +43,7 @@ const milestones: {
     type: "open" as const,
     prizeLabel: "CHOOSE ONE",
     options: [
-      "$500 Airline Gift Card",
+      "$500 Gift Card to Airline of Your Choice",
       "Othership 10-Class Pack",
       "$500 Great Jones Spa Credit",
     ],
@@ -54,7 +54,7 @@ const milestones: {
     threshold: "3 referrals who get hired",
     type: "open" as const,
     prizeLabel: "CHOOSE ONE",
-    options: ["EightSleep Pod", "Classic Cabin Rimowa", "Peloton Bike"],
+    options: ["EightSleep Pod", "Rimowa Classic Cabin Suitcase", "Peloton Bike"],
   },
   {
     name: "WINNING TEAM",
