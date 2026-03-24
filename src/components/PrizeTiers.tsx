@@ -21,7 +21,7 @@ const milestones: {
     options: [
       "Paragon Sports",
       "Bathhouse",
-      "NYC Arts Institution (MoMA, The Met, etc.)",
+      "NYC Arts Institution (MoMA, The Met, Whitney, Frick)",
     ],
   },
   {
@@ -43,7 +43,7 @@ const milestones: {
     type: "open" as const,
     prizeLabel: "CHOOSE ONE",
     options: [
-      "$500 Delta Airlines Gift Card",
+      "$500 Airline Gift Card",
       "Othership 10-Class Pack",
       "$500 Great Jones Spa Credit",
     ],
@@ -53,8 +53,8 @@ const milestones: {
     icon: <Trophy size={24} weight="duotone" className="text-neon-yellow" />,
     threshold: "3 referrals who get hired",
     type: "open" as const,
-    prizeLabel: null,
-    options: ["EightSleep Pod"],
+    prizeLabel: "CHOOSE ONE",
+    options: ["EightSleep Pod", "Classic Cabin Rimowa", "Peloton Bike"],
   },
   {
     name: "WINNING TEAM",
@@ -215,6 +215,7 @@ export default function PrizeTiers() {
               <span><span className="text-emerald-400/75 font-semibold">ANYONE</span> — Everyone who hits it wins</span>
             </div>
           </div>
+          <p className="text-white/70 text-xs text-center mt-3">Only the open roles listed above count towards milestone prizes.</p>
         </motion.div>
 
         {/* Mobile cards */}
@@ -263,6 +264,7 @@ export default function PrizeTiers() {
               <span><span className="text-emerald-400/75 font-semibold">ANYONE</span> — Everyone who hits it wins</span>
             </div>
           </div>
+          <p className="text-white/70 text-xs text-center mt-3">Only the open roles listed above count towards milestone prizes.</p>
         </div>
       </div>
     </section>

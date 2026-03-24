@@ -39,7 +39,7 @@ export default function Hero() {
         January&apos;s 2026 Referral Drive
       </p>
       <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed">
-        Referrals are how we find our best people. For the next 3 weeks, every bonus is doubled and top referrers win big. Think of someone great — and send them our way.
+        Referrals are how we find our best people. From March 24 through April 10, every bonus is doubled and top referrers win big. Think of someone great — and send them our way.
       </p>
 
       {/* Countdown */}

@@ -18,7 +18,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When does the contest end?",
-    a: "April 10, 2026. All referrals must be entered into Ashby by 11:59 PM ET on that date to qualify for 2x bonuses and milestone prizes.",
+    a: "The contest runs March 24 – April 10, 2026. All referrals must be entered into Ashby by 11:59 PM ET on April 10 to qualify for 2x bonuses and milestone prizes.",
   },
   {
     q: "What if I have a great person in mind but I'm not sure which role fits?",
@@ -26,7 +26,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What if my referral was submitted before the contest started?",
-    a: "Only referrals submitted during the March Madness window (through April 10) qualify for 2x bonuses and milestone prizes. Prior referrals follow the standard program.",
+    a: "Only referrals submitted during the March Madness window (March 24 – April 10) qualify for 2x bonuses and milestone prizes. Prior referrals follow the standard program.",
   },
   {
     q: "Can I refer someone who already applied or is already in the pipeline?",
@@ -38,7 +38,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When are prizes and bonuses paid out?",
-    a: "Milestone prizes are awarded as they are attained, within 30 days. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends. The 2x multiplier applies to any referral submitted by April 10, regardless of when the hire closes.",
+    a: "Milestone prizes are awarded as they are attained, within 30 days. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends. The 2x multiplier applies to any referral submitted between March 24 and April 10, regardless of when the hire closes.",
   },
   {
     q: "Do standard referral program rules still apply?",
