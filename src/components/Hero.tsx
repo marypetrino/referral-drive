@@ -75,7 +75,7 @@ export default function Hero() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleCtaClick}
-        className="arcade-btn inline-block bg-january-blue hover:bg-january-blue-light text-white pixel-heading text-xs sm:text-sm px-8 py-4 rounded-lg transition-all"
+        className="cta-fire inline-block bg-january-blue hover:bg-january-blue-light text-white pixel-heading text-xs sm:text-sm px-8 py-4 rounded-lg transition-colors"
       >
         SUBMIT A REFERRAL
       </a>
