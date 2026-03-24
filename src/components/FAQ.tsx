@@ -78,10 +78,10 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          open ? "max-h-64 pb-4" : "max-h-0"
+          open ? "max-h-96 pb-4" : "max-h-0"
         }`}
       >
-        <p className="text-white/70 text-sm leading-relaxed">{a}</p>
+        <p className="text-white/70 text-sm leading-relaxed whitespace-pre-line">{a}</p>
       </div>
     </motion.div>
   );
