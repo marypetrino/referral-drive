@@ -6,7 +6,7 @@ import { useState } from "react";
 const faqs: { q: string; a: string }[] = [
   {
     q: "Who is eligible to participate?",
-    a: "All January employees except VPs and above, Talent team members, and hiring managers referring into their own roles can participate. Internal candidates are also not bonus-eligible.",
+    a: "All January employees are eligible to participate except: VPs and above, Talent team members, and hiring managers referring for their own roles. Internal candidates are also not bonus-eligible.",
   },
   {
     q: "How do I submit a referral?",
@@ -14,11 +14,11 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What should I say in my message when I reach out?",
-    a: "Use the outreach builder to create a ready-to-send message in minutes.",
+    a: "Use the templated message builder on this page to create a ready-to-send message in seconds.",
   },
   {
-    q: "When does the contest end?",
-    a: "The contest runs March 24 – April 10, 2026. All referrals must be entered into Ashby by 11:59 PM ET on April 10 to qualify for 2x bonuses and milestone prizes.",
+    q: "When does the contest run?",
+    a: "The contest opens March 24, 2026 and closes 11:59 PM ET on April 10, 2026. All referrals must be entered into Ashby by that deadline to qualify for 2x bonuses and milestone prizes.",
   },
   {
     q: "What if I have a great person in mind but I'm not sure which role fits?",
@@ -38,11 +38,11 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When are prizes and bonuses paid out?",
-    a: "Milestone prizes are awarded as they are attained, within 30 days. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends. The 2x multiplier applies to any referral submitted between March 24 and April 10, regardless of when the hire closes.",
+    a: "Milestone prizes are awarded within 30 days after the contest ends. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends. The 2x bonus applies to any referral submitted between March 24 and 11:59 PM ET on April 10, regardless of when the hire closes.",
   },
   {
     q: "Do standard referral program rules still apply?",
-    a: "Yes. March Madness adds 2x bonuses and milestone prizes on top of the existing program. All standard eligibility rules, payout terms, and policies remain in effect.",
+    a: "Yes. All standard eligibility rules, payout terms, and policies remain in effect.",
   },
   {
     q: "What's the difference between RACE and ANYONE prizes?",

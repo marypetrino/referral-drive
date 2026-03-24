@@ -44,7 +44,7 @@ export default function PasswordGate({ onSuccess }: { onSuccess: () => void }) {
         </div>
 
         <h1 className="pixel-heading text-2xl sm:text-3xl text-white glow-blue mb-4 leading-relaxed">
-          MARCH<br />MADNESS
+          MARCH MADNESS<br />REFERRAL SPRINT
         </h1>
         <p className="text-white/70 text-sm mb-8 font-medium tracking-wide uppercase">
           January Referral Drive 2026

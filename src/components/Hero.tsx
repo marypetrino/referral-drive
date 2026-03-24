@@ -32,13 +32,10 @@ export default function Hero() {
       </div>
 
       <h1 className="pixel-heading text-3xl sm:text-5xl lg:text-6xl text-white glow-blue mb-3 leading-tight tracking-wider">
-        MARCH MADNESS
+        MARCH MADNESS<br />REFERRAL SPRINT
       </h1>
 
-      <p className="text-lg sm:text-xl text-white/90 mb-2 max-w-xl font-semibold">
-        January&apos;s 2026 Referral Drive
-      </p>
-      <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed">
+      <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed mt-3">
         Referrals are how we find our best people. From March 24 through April 10, every bonus is doubled and top referrers win big. Think of someone great — and send them our way.
       </p>
 

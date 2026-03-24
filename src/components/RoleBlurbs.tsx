@@ -157,7 +157,7 @@ export default function RoleBlurbs() {
           className="text-center mb-12"
         >
           <h2 className="pixel-heading text-xl sm:text-2xl text-white glow-blue mb-3">
-            WHO TO REFER
+            ROLES TO REFER
           </h2>
           <p className="text-white/70 text-sm max-w-lg mx-auto">
             Here&apos;s what we&apos;re looking for in each role. Think about who you know.

@@ -95,9 +95,8 @@ export default function BonusTiers() {
           <h2 className="pixel-heading text-xl sm:text-2xl text-white glow-blue mb-3">
             REFERRAL BONUSES
           </h2>
-          <p className="text-white/70 text-sm mb-1">All bonuses doubled for March Madness.</p>
           <p className="pixel-heading text-[10px] text-neon-orange glow-orange mb-2">2X MULTIPLIER ACTIVE</p>
-          <p className="text-white/70 text-xs">Only the open roles listed below are eligible for the 2x bonus and milestone prizes.</p>
+          <p className="text-white/70 text-xs">Bonuses for the below open roles are doubled for March Madness.</p>
         </motion.div>
 
         {/* Cabinet frame wrapper */}
