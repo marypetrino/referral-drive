@@ -63,29 +63,29 @@ function HighlightedText({ text }: { text: string }) {
 // ─── Copy blocks ──────────────────────────────────────────────────────────────
 
 const SUBJECT_LINES = {
-  a: "{{candidateName}} — {{roleTitle}} @ January",
+  a: "Thought of you — {{roleTitle}} at January",
   b: "{{roleTitle}} @ January",
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}} — I work at a fintech called January and we're hiring a {{roleTitle}}. Given your {{relevantSkill}} at {{candidateCompany}}, I think you'd be a really strong fit.",
-  b: "Hey {{candidateName}} — I work at January, and we're hiring a {{roleTitle}} that I think you'd be perfect for. We're building modern, user-first systems that help millions of people get out of financial distress.",
+  a: "Hey {{candidateName}} — I'm at a fintech called January and we're hiring a {{roleTitle}}. Your {{relevantSkill}} work at {{candidateCompany}} is exactly the kind of background we need — had to reach out.",
+  b: "Hey {{candidateName}} — I'm at January, and we're hiring a {{roleTitle}} I think you'd be perfect for. We help people dig out of financial distress — it's the kind of problem that's hard to stop thinking about once you see the scale of it.",
 };
 
 const COMPANY_PITCH = {
-  a: "We're a fast-growing fintech fixing what's broken in consumer finance. From a strong foundation, we're expanding into a platform that helps both borrowers and lenders succeed.",
-  b: "Our flagship product has serviced 15M+ Americans and nearly $20B in debt. We're profitable, with tens of millions in annual revenue.",
+  a: "January is fixing what's broken in consumer finance. We started by helping borrowers in distress, and now we're building a platform that works for both sides — borrowers and lenders.",
+  b: "We've already serviced 15M+ Americans and nearly $20B in debt. Profitable, tens of millions in annual revenue, and still early.",
 };
 
 const CTAS = {
-  a: "Would you be open to a quick chat?",
-  b: "Sound interesting?",
+  a: "Worth a conversation?",
+  b: "Open to hearing more?",
 };
 
 const TEXT_TEMPLATES = {
-  a: "Hey {{candidateName}} — it's {{senderName}}. I work at a fintech called January and we're looking for a {{roleTitle}}. Your work at {{candidateCompany}} immediately came to mind — think you'd be a great fit. Are you open to a chat?",
-  b: "Hey {{candidateName}}, it's {{senderName}}. Quick one — my company January is hiring a {{roleTitle}} and I keep thinking you'd be perfect for it. Are you open to a chat?",
-  c: "Hey {{candidateName}} — have you ever heard of January? I work there — we've serviced 15M+ Americans and nearly $20B in debt, and we're just getting started. There's a {{roleTitle}} role that has your name on it. Lmk if you want me to put you in touch with the team.",
+  a: "Hey {{candidateName}} — it's {{senderName}}. I'm at a fintech called January and we're looking for a {{roleTitle}}. Your work at {{candidateCompany}} came to mind right away. Worth a conversation?",
+  b: "Hey {{candidateName}}, it's {{senderName}}. Quick one — my company January is hiring a {{roleTitle}} and you keep coming to mind. Open to hearing more about it?",
+  c: "Hey {{candidateName}} — ever heard of January? I work there. We've serviced 15M+ Americans and nearly $20B in debt, and we're just getting started. There's a {{roleTitle}} role that has your name on it. Want me to connect you with the team?",
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -339,7 +339,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                         else setLinkedinSubjectVar(v as "a" | "b");
                       }}
                       options={[
-                        { value: "a", label: "Name — Role @ January" },
+                        { value: "a", label: "Thought of you — Role" },
                         { value: "b", label: "Role @ January" },
                       ]}
                     />
@@ -376,8 +376,8 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                     dropdownValue={ctaVar}
                     onDropdownChange={(v) => setCtaVar(v as "a" | "b")}
                     options={[
-                      { value: "a", label: "Open to a chat?" },
-                      { value: "b", label: "Sound interesting?" },
+                      { value: "a", label: "Worth a conversation?" },
+                      { value: "b", label: "Open to hearing more?" },
                     ]}
                   />
                 </div>
@@ -412,31 +412,34 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
             <div className="p-5 flex flex-col">
               <div className="flex items-center justify-between mb-3">
                 <p className="pixel-heading text-[9px] text-neon-orange/70 tracking-wider">PREVIEW</p>
-                <div className="flex items-center gap-3">
-                  {channel === "linkedin" && (
-                    <span className={`text-[11px] font-mono ${composed.length > 1900 ? "text-fire-orange" : "text-white/30"}`}>
-                      {composed.length} / 1,900
-                    </span>
-                  )}
-                  <CopyButton text={subjectLine ? `Subject: ${subjectLine}\n\n${composed}` : composed} />
-                </div>
+                {channel === "linkedin" && (
+                  <span className={`text-[11px] font-mono ${composed.length > 1900 ? "text-fire-orange" : "text-white/30"}`}>
+                    {composed.length} / 1,900
+                  </span>
+                )}
               </div>
 
               {/* Subject line for email and linkedin */}
               {subjectLine && (
                 <div className="mb-3 pb-3 border-b border-white/5">
                   <span className="text-white/30 text-[11px] font-medium">Subject:</span>
-                  <p className="text-white text-sm mt-0.5"><HighlightedText text={subjectLine} /></p>
+                  <div className="flex items-center justify-between gap-3 mt-0.5">
+                    <p className="text-white text-sm"><HighlightedText text={subjectLine} /></p>
+                    <CopyButton text={subjectLine} />
+                  </div>
                 </div>
               )}
 
               {/* Message body */}
-              <div className="flex-1 bg-arcade-dark/50 rounded-xl border border-january-blue/10 p-4 overflow-y-auto">
+              <div className="flex-1 bg-arcade-dark/50 rounded-xl border border-january-blue/10 p-4 pb-12 overflow-y-auto relative">
                 {composed.split("\n\n").map((para, i) => (
                   <p key={i} className="text-white/80 text-sm leading-relaxed mb-3 last:mb-0 whitespace-pre-wrap">
                     <HighlightedText text={para} />
                   </p>
                 ))}
+                <div className="absolute bottom-3 right-3">
+                  <CopyButton text={composed} />
+                </div>
               </div>
             </div>
           </div>
