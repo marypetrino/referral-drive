@@ -20,7 +20,7 @@ const tiers = [
     name: "SLAM DUNK",
     bonus: "$6,000",
     color: "january-blue-light",
-    description: "Core builders where a warm intro cuts through. Your referral jumps the line.",
+    description: "Core technical builders behind the product — the people who make the team around them better.",
     roles: [
       "Senior Product Manager",
       "Staff Product Manager (AI Agents)",
@@ -32,7 +32,7 @@ const tiers = [
     name: "FAST BREAK",
     bonus: "$4,000",
     color: "neon-yellow",
-    description: "Cross-functional roles where culture fit matters as much as the resume. Sourcing can't find these people — you can.",
+    description: "The operators and strategists who keep January running and scaling, where the right person transforms the function.",
     roles: [
       "Analyst (Client Ops)",
       "Client Operations Manager",

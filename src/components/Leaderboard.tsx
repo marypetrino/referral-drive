@@ -82,7 +82,7 @@ function ComingSoon() {
         <Timer size={48} weight="duotone" className="text-january-blue-light mb-4" />
         <p className="pixel-heading text-sm text-neon-orange glow-orange mb-2">COMING SOON</p>
         <p className="text-white/50 text-sm max-w-xs text-center">
-          The board lights up when the first referral drops.
+          Check back here to see who&apos;s taking the top spot.
         </p>
       </div>
     </div>

@@ -51,10 +51,10 @@ export default function Home() {
       <BonusTiers />
 
       <div className="border-t border-january-blue/10" />
-      <RoleBlurbs />
+      <PrizeTiers />
 
       <div className="border-t border-january-blue/10" />
-      <PrizeTiers />
+      <RoleBlurbs />
 
       <div className="border-t border-january-blue/10" />
       <FAQ />
