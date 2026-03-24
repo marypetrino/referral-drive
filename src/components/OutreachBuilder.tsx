@@ -65,18 +65,18 @@ const SUBJECT_LINES = {
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January and we're hiring a {{roleTitle}}. Your work at {{candidateCompany}} feels pretty relevant to the type of background we need so wanted to reach out.",
-  b: "Hey {{candidateName}} — I've been working at a fintech startup called January, and we're hiring a {{roleTitle}} I think you'd be awesome for. We've helped millions of people get out of financial distress and I've found the work we're doing to be super fulfilling and meaningful.",
+  a: "Hey {{candidateName}}, it's been a while! I've been working at a fintech called January and we're hiring a {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
+  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, a fintech called January, is hiring a {{roleTitle}} and I think you'd be a great fit. We're building the infrastructure to make consumer credit work better for everyone, and have helped millions of people get out of financial distress. It's honestly one of the most fulfilling jobs I've had.",
 };
 
 const COMPANY_PITCH = {
-  a: "January is fixing what's broken in consumer finance. January has directly helped countless consumers pay off their debts, moving them forward on their paths to financial freedom. We're building the infrastructure to do this at massive scale with AI and data-driven personalization, and I'm pretty excited about the impact and trajectory things are on.",
-  b: "Our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and things are really starting to pick up.",
+  a: "Some background on what we do: January is building the AI platform that allows consumers to resolve their debt and regain financial freedom. We're scaling that massively through data-driven personalization and AI trained on billions of interactions. We're having incredible impact — consumers rate us 50% higher than the creditors who referred them!",
+  b: "Our first product has already serviced 15M+ Americans and nearly $20B in debt and we've hit tens of millions in revenue. We just launched our second product, have best-in-class software metrics across growth, retention, margins, and expansion, and are at the most exciting inflection point in our history.",
 };
 
 const CTAS = {
-  a: "Would love to catch up and chat a bit on it if you're open to it?",
-  b: "Would love to connect you with the team to see if there might be a fit if you're open to it!",
+  a: "I'd love to catch up and share more!",
+  b: "I'd love to connect you with the team to see if there might be a fit if you're open to it!",
 };
 
 const TEXT_TEMPLATES = {
