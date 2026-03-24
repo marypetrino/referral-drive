@@ -12,7 +12,6 @@ interface Inputs {
   candidateName: string;
   candidateCompany: string;
   roleTitle: string;
-  relevantSkill: string;
 }
 
 // ─── Template helpers ─────────────────────────────────────────────────────────
@@ -22,17 +21,15 @@ const PLACEHOLDERS: Record<string, string> = {
   candidateName: "[candidate name]",
   candidateCompany: "[their company]",
   roleTitle: "[role title]",
-  relevantSkill: "[relevant skill area]",
 };
 
 function fill(template: string, inputs: Inputs): string {
-  const { senderName, candidateName, candidateCompany, roleTitle, relevantSkill } = inputs;
+  const { senderName, candidateName, candidateCompany, roleTitle } = inputs;
   return template
     .replace(/\{\{senderName\}\}/g, senderName || PLACEHOLDERS.senderName)
     .replace(/\{\{candidateName\}\}/g, candidateName || PLACEHOLDERS.candidateName)
     .replace(/\{\{candidateCompany\}\}/g, candidateCompany || PLACEHOLDERS.candidateCompany)
-    .replace(/\{\{roleTitle\}\}/g, roleTitle || PLACEHOLDERS.roleTitle)
-    .replace(/\{\{relevantSkill\}\}/g, relevantSkill || PLACEHOLDERS.relevantSkill);
+    .replace(/\{\{roleTitle\}\}/g, roleTitle || PLACEHOLDERS.roleTitle);
 }
 
 // Renders text with unfilled placeholders highlighted
@@ -68,24 +65,23 @@ const SUBJECT_LINES = {
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}} — I'm at a fintech called January and we're hiring a {{roleTitle}}. Your {{relevantSkill}} work at {{candidateCompany}} is exactly the kind of background we need — had to reach out.",
-  b: "Hey {{candidateName}} — I'm at January, and we're hiring a {{roleTitle}} I think you'd be perfect for. We help people dig out of financial distress — it's the kind of problem that's hard to stop thinking about once you see the scale of it.",
+  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January and we're hiring a {{roleTitle}}. Your work at {{candidateCompany}} feels pretty relevant to the type of background we need so wanted to reach out.",
+  b: "Hey {{candidateName}} — I've been working at a fintech startup called January, and we're hiring a {{roleTitle}} I think you'd be awesome for. We've helped millions of people get out of financial distress and I've found the work we're doing to be super fulfilling and meaningful.",
 };
 
 const COMPANY_PITCH = {
-  a: "January is fixing what's broken in consumer finance. We started by helping borrowers in distress, and now we're building a platform that works for both sides — borrowers and lenders.",
-  b: "We've already serviced 15M+ Americans and nearly $20B in debt. Profitable, tens of millions in annual revenue, and still early.",
+  a: "January is fixing what's broken in consumer finance. January has directly helped countless consumers pay off their debts, moving them forward on their paths to financial freedom. We're building the infrastructure to do this at massive scale with AI and data-driven personalization, and I'm pretty excited about the impact and trajectory things are on.",
+  b: "Our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and things are really starting to pick up.",
 };
 
 const CTAS = {
-  a: "Worth a conversation?",
-  b: "Open to hearing more?",
+  a: "Would love to catch up and chat a bit on it if you're open to it?",
+  b: "Would love to connect you with the team to see if there might be a fit if you're open to it!",
 };
 
 const TEXT_TEMPLATES = {
-  a: "Hey {{candidateName}} — it's {{senderName}}. I'm at a fintech called January and we're looking for a {{roleTitle}}. Your work at {{candidateCompany}} came to mind right away. Worth a conversation?",
-  b: "Hey {{candidateName}}, it's {{senderName}}. Quick one — my company January is hiring a {{roleTitle}} and you keep coming to mind. Open to hearing more about it?",
-  c: "Hey {{candidateName}} — ever heard of January? I work there. We've serviced 15M+ Americans and nearly $20B in debt, and we're just getting started. There's a {{roleTitle}} role that has your name on it. Want me to connect you with the team?",
+  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January which has been an awesome journey so far - have found the work we're doing to be super fulfilling. We're hiring a {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
+  b: "Hey {{candidateName}}! Hope all is well in your world. I've been working at a fintech startup called January helping millions of people get out of financial distress, and has been an awesome journey thus far. Things are really starting to pick up - our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and there's lots of momentum. I thought of you for a {{roleTitle}} we're hiring for since think it could be a great fit. Open to hearing more about it?",
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -183,7 +179,6 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
     candidateName: "",
     candidateCompany: "",
     roleTitle: "",
-    relevantSkill: "",
   });
 
   // Block toggles
@@ -199,7 +194,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
   const [ctaVar, setCtaVar] = useState<"a" | "b">("a");
 
   // Text template
-  const [textVar, setTextVar] = useState<"a" | "b" | "c">("a");
+  const [textVar, setTextVar] = useState<"a" | "b">("a");
 
   // LinkedIn subject line
   const [linkedinSubjectOn, setLinkedinSubjectOn] = useState(true);
@@ -315,13 +310,6 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                   placeholder="e.g. Senior Software Engineer"
                 />
               </div>
-              <InputField
-                label="Relevant Skill Area"
-                value={inputs.relevantSkill}
-                onChange={(v) => updateInput("relevantSkill", v)}
-                placeholder="e.g. payment infrastructure"
-                subtext="What's one thing that impressed you about this person?"
-              />
 
               {/* Modular blocks — only for email and linkedin */}
               {channel !== "text" ? (
@@ -376,8 +364,8 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                     dropdownValue={ctaVar}
                     onDropdownChange={(v) => setCtaVar(v as "a" | "b")}
                     options={[
-                      { value: "a", label: "Worth a conversation?" },
-                      { value: "b", label: "Open to hearing more?" },
+                      { value: "a", label: "Catch up" },
+                      { value: "b", label: "Intro to team" },
                     ]}
                   />
                 </div>
@@ -386,9 +374,8 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                   <p className="pixel-heading text-[9px] text-neon-orange/70 mb-3 tracking-wider">TEMPLATE</p>
                   <div className="space-y-2">
                     {([
-                      { id: "a" as const, label: "Personal + Role", desc: "Mentions their company and the specific role" },
-                      { id: "b" as const, label: "Casual Ping", desc: "Short and low-detail, just opens the door" },
-                      { id: "c" as const, label: "Warm Referral", desc: "Offers to connect them with the team" },
+                      { id: "a" as const, label: "Personal + Role", desc: "Warm and personal, mentions the role" },
+                      { id: "b" as const, label: "Traction + Role", desc: "Leads with traction and momentum" },
                     ]).map((t) => (
                       <button
                         key={t.id}
