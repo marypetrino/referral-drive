@@ -9,6 +9,7 @@ import BonusTiers from "../components/BonusTiers";
 import RoleBlurbs from "../components/RoleBlurbs";
 import PrizeTiers from "../components/PrizeTiers";
 import FAQ from "../components/FAQ";
+import SilhouetteDivider from "../components/SilhouetteDivider";
 
 function getCookie(name: string): string | null {
   if (typeof document === "undefined") return null;
@@ -44,24 +45,25 @@ export default function Home() {
       {/* Action links moved up near top for immediate action */}
       <ActionLinks />
 
-      <div className="border-t border-january-blue/10" />
+      <SilhouetteDivider pose="shooter" />
       <Leaderboard />
 
-      <div className="border-t border-january-blue/10" />
+      <SilhouetteDivider pose="dunk" flip />
       <BonusTiers />
 
-      <div className="border-t border-january-blue/10" />
+      <SilhouetteDivider pose="layup" />
       <PrizeTiers />
 
-      <div className="border-t border-january-blue/10" />
+      <SilhouetteDivider pose="crossover" flip />
       <RoleBlurbs />
 
-      <div className="border-t border-january-blue/10" />
+      <SilhouetteDivider pose="shooter" flip />
       <FAQ />
 
       {/* Footer */}
-      <footer className="py-8 px-4 text-center border-t border-january-blue/10">
-        <p className="text-white/25 text-xs">
+      <footer className="py-8 px-4 text-center">
+        <SilhouetteDivider pose="dunk" />
+        <p className="text-white/25 text-xs mt-2">
           January &times; Carrara &mdash; March Madness 2026
         </p>
       </footer>

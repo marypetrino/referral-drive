@@ -1,51 +1,32 @@
 "use client";
 
 import CountdownTimer from "./CountdownTimer";
-import { useEffect, useRef, useCallback } from "react";
-import confetti from "canvas-confetti";
+import SwooshAnimation, { useSwoosh } from "./SwooshAnimation";
+import { useCallback } from "react";
 import { Basketball, ArrowDown } from "@phosphor-icons/react";
 
 export default function Hero() {
-  const hasLaunched = useRef(false);
-
-  useEffect(() => {
-    if (hasLaunched.current) return;
-    hasLaunched.current = true;
-
-    confetti({
-      particleCount: 80,
-      spread: 100,
-      origin: { y: 0.4 },
-      colors: ["#FF6B2B", "#FF4500", "#FFD700", "#001AA1", "#FFFFFF"],
-      ticks: 120,
-      gravity: 0.8,
-      shapes: ["circle"],
-    });
-  }, []);
+  const { playing, trigger: triggerSwoosh } = useSwoosh();
 
   const handleCtaClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    const rect = (e.target as HTMLElement).getBoundingClientRect();
-    const x = (rect.left + rect.width / 2) / window.innerWidth;
-    const y = (rect.top + rect.height / 2) / window.innerHeight;
+    e.preventDefault();
+    const href = (e.currentTarget as HTMLAnchorElement).href;
 
-    confetti({
-      particleCount: 50,
-      spread: 70,
-      origin: { x, y },
-      colors: ["#FF6B2B", "#FFD700", "#FFFFFF"],
-      ticks: 80,
-      gravity: 1.2,
-      shapes: ["circle"],
-      scalar: 0.8,
-    });
-  }, []);
+    // Trigger dual swoosh animation
+    triggerSwoosh();
+
+    // Navigate after animation plays
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 800);
+  }, [triggerSwoosh]);
 
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-16 overflow-hidden">
       {/* Background glow orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-january-blue/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Bouncing basketball */}
+      {/* Basketball icon */}
       <div className="mb-6 animate-bounce" style={{ animationDuration: "2s" }}>
         <Basketball size={72} weight="duotone" className="text-neon-orange sm:w-[96px] sm:h-[96px]" />
       </div>
@@ -82,6 +63,9 @@ export default function Hero() {
       <p className="text-white/70 text-sm mt-3">
         Go to Ashby and click &quot;+ Referral&quot; on the right side to add your referral.
       </p>
+
+      {/* Swoosh overlay — two hoops on either side */}
+      <SwooshAnimation playing={playing} />
 
       {/* Scroll hint */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/25 animate-pulse">
