@@ -23,13 +23,19 @@ const PLACEHOLDERS: Record<string, string> = {
   roleTitle: "[role title]",
 };
 
+function aAn(word: string): string {
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
+
 function fill(template: string, inputs: Inputs): string {
   const { senderName, candidateName, candidateCompany, roleTitle } = inputs;
+  const resolved = roleTitle || PLACEHOLDERS.roleTitle;
   return template
     .replace(/\{\{senderName\}\}/g, senderName || PLACEHOLDERS.senderName)
     .replace(/\{\{candidateName\}\}/g, candidateName || PLACEHOLDERS.candidateName)
     .replace(/\{\{candidateCompany\}\}/g, candidateCompany || PLACEHOLDERS.candidateCompany)
-    .replace(/\{\{roleTitle\}\}/g, roleTitle || PLACEHOLDERS.roleTitle);
+    .replace(/\{\{a\/an\}\}/g, aAn(resolved))
+    .replace(/\{\{roleTitle\}\}/g, resolved);
 }
 
 // Renders text with unfilled placeholders highlighted
@@ -86,8 +92,8 @@ const SUBJECT_LINES = {
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}}, it's been a while! I've been working at a fintech called January and we're hiring a {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
-  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, a fintech called January, is hiring a {{roleTitle}} and I think you'd be a great fit. We're building the infrastructure to make consumer credit work better for everyone, and have helped millions of people get out of financial distress. It's honestly one of the most fulfilling jobs I've had.",
+  a: "Hey {{candidateName}}, it's been a while! I've been working at a fintech called January and we're hiring {{a/an}} {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
+  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, a fintech called January, is hiring {{a/an}} {{roleTitle}} and I think you'd be a great fit. We're building the infrastructure to make consumer credit work better for everyone, and have helped millions of people get out of financial distress. It's honestly one of the most fulfilling jobs I've had.",
 };
 
 const COMPANY_PITCH = {
@@ -101,8 +107,8 @@ const CTAS = {
 };
 
 const TEXT_TEMPLATES = {
-  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January which has been an awesome journey so far - have found the work we're doing to be super fulfilling. We're hiring a {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
-  b: "Hey {{candidateName}}! Hope all is well in your world. I've been working at a fintech startup called January helping millions of people get out of financial distress, and has been an awesome journey thus far. Things are really starting to pick up - our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and there's lots of momentum. I thought of you for a {{roleTitle}} we're hiring for since think it could be a great fit. Open to hearing more about it?",
+  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January which has been an awesome journey so far - have found the work we're doing to be super fulfilling. We're hiring {{a/an}} {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
+  b: "Hey {{candidateName}}! Hope all is well in your world. I've been working at a fintech startup called January helping millions of people get out of financial distress, and has been an awesome journey thus far. Things are really starting to pick up - our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and there's lots of momentum. I thought of you for {{a/an}} {{roleTitle}} we're hiring for since think it could be a great fit. Open to hearing more about it?",
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
