@@ -21,7 +21,7 @@ const milestones: {
     options: [
       "Paragon Sports",
       "Bathhouse",
-      "NYC Arts Institution (MoMA, The Met, Whitney, Frick)",
+      "NYC Arts Institution (MoMA, The Met)",
     ],
   },
   {
