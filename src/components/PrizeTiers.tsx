@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Basketball, Bird, Star, Trophy, UsersThree, Lightning, Sparkle } from "@phosphor-icons/react";
+import { Basketball, Bird, Star, Trophy, UsersThree, Lightning, Sparkle, SealCheck } from "@phosphor-icons/react";
 import { type ReactNode } from "react";
 
 const milestones: {
@@ -11,6 +11,7 @@ const milestones: {
   type: "race" | "open";
   prizeLabel: string | null;
   options: string[];
+  winner?: string;
 }[] = [
   {
     name: "FIRST POSSESSION",
@@ -23,6 +24,7 @@ const milestones: {
       "Bathhouse",
       "NYC Arts Institution (MoMA, The Met)",
     ],
+    winner: "Meghan York",
   },
   {
     name: "EARLY BIRD",
@@ -65,6 +67,23 @@ const milestones: {
     options: ["Celebratory Team Dinner"],
   },
 ];
+
+function WinnerStamp({ name }: { name: string }) {
+  return (
+    <div
+      className="inline-flex items-center gap-2 px-4 py-2 rounded border-2 border-neon-yellow/70 bg-neon-yellow/10"
+      style={{
+        transform: "rotate(-3deg)",
+        boxShadow: "0 0 12px rgba(255,215,0,0.3), 0 0 24px rgba(255,215,0,0.1)",
+      }}
+    >
+      <SealCheck size={20} weight="fill" className="text-neon-yellow" />
+      <span className="pixel-heading text-[10px] text-neon-yellow tracking-wider whitespace-nowrap">
+        WON BY {name.toUpperCase()}
+      </span>
+    </div>
+  );
+}
 
 const PRIZE_GLOW = "0 0 12px rgba(255,215,0,0.5), 0 0 28px rgba(255,215,0,0.2)";
 
@@ -185,6 +204,11 @@ export default function PrizeTiers() {
 
                     <div className="relative col-span-3 text-white/80 text-sm font-medium leading-snug pt-0.5">
                       {m.threshold}
+                      {m.winner && (
+                        <div className="mt-3">
+                          <WinnerStamp name={m.winner} />
+                        </div>
+                      )}
                     </div>
 
                     <div className="relative col-span-2 pt-0.5">
@@ -245,6 +269,9 @@ export default function PrizeTiers() {
                     </span>
                     <span className="ml-auto"><TypeBadge type={m.type} /></span>
                   </div>
+                  {m.winner && (
+                    <div className="mb-2"><WinnerStamp name={m.winner} /></div>
+                  )}
                   <p className="text-white/80 text-sm font-medium mb-3">{m.threshold}</p>
                   <div className="border-t border-january-blue/15 pt-3">
                     <PrizeCell prizeLabel={m.prizeLabel} options={m.options} />
