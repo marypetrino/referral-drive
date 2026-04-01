@@ -2,16 +2,21 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Crown, Medal, Trophy, Timer } from "@phosphor-icons/react";
+import { Crown, Medal, Timer } from "@phosphor-icons/react";
 
 interface LeaderboardEntry {
   employee_name: string;
-  team: string;
-  referrals_submitted: number;
+  total_referrals: number;
+  counted_referrals: number;
   at_ips: number;
   at_hms: number;
+  at_panel: number;
   at_final: number;
+  at_offer: number;
   hires: number;
+  scoring: number;
+  all_star: boolean;
+  champion: boolean;
 }
 
 function AnimatedNumber({ value, delay = 0 }: { value: number; delay?: number }) {
@@ -107,7 +112,7 @@ function MobileCard({ entry, rank }: { entry: LeaderboardEntry; rank: number }) 
           <span className="text-white font-semibold">{entry.employee_name}</span>
         </div>
         <span className="pixel-heading text-xs text-neon-orange">
-          <AnimatedNumber value={entry.referrals_submitted} /> REF
+          <AnimatedNumber value={entry.counted_referrals} /> REF
         </span>
       </div>
       <div className="grid grid-cols-4 gap-2 text-center">
@@ -132,16 +137,26 @@ export default function Leaderboard() {
   const [updatedAt, setUpdatedAt] = useState<string>("");
   const [isEmpty, setIsEmpty] = useState(true);
 
+  const enabled = process.env.NEXT_PUBLIC_LEADERBOARD_ENABLED === "true";
+
   useEffect(() => {
+    if (!enabled) return;
+
     fetch("/api/leaderboard")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
         setEntries(data.entries);
         setUpdatedAt(data.updated_at);
         setIsEmpty(data.is_empty);
       })
-      .catch(() => {});
-  }, []);
+      .catch((err) => {
+        console.error("Leaderboard fetch failed:", err);
+        setIsEmpty(true);
+      });
+  }, [enabled]);
 
   return (
     <section className="py-16 sm:py-24 px-4" id="leaderboard">
@@ -158,7 +173,7 @@ export default function Leaderboard() {
           <p className="text-white/70 text-sm">Who&apos;s heating up?</p>
         </motion.div>
 
-        {isEmpty ? (
+        {!enabled || isEmpty ? (
           <ComingSoon />
         ) : (
           <>
@@ -167,7 +182,7 @@ export default function Leaderboard() {
               <div className="grid grid-cols-8 gap-2 px-4 py-3 border-b border-january-blue/20 text-[10px] pixel-heading text-muted">
                 <span>RANK</span>
                 <span className="col-span-2">NAME</span>
-                <span className="text-center">SUBMITTED</span>
+                <span className="text-center">REFERRALS</span>
                 <span className="text-center">IPS</span>
                 <span className="text-center">HMS</span>
                 <span className="text-center">FINAL</span>
@@ -187,7 +202,7 @@ export default function Leaderboard() {
                   >
                     <div><RankBadge rank={rank} /></div>
                     <div className="col-span-2 text-white font-semibold text-sm">{entry.employee_name}</div>
-                    <div className="text-center text-white font-bold"><AnimatedNumber value={entry.referrals_submitted} delay={i * 100} /></div>
+                    <div className="text-center text-white font-bold"><AnimatedNumber value={entry.counted_referrals} delay={i * 100} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_ips} delay={i * 100 + 50} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_hms} delay={i * 100 + 100} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_final} delay={i * 100 + 150} /></div>
