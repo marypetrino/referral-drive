@@ -1,6 +1,6 @@
 "use client";
 
-import { Horse, Trophy, Horseshoe, FlagCheckered } from "@phosphor-icons/react";
+import { Horse, Trophy, FlagCheckered } from "@phosphor-icons/react";
 import type { ComponentType } from "react";
 
 // Derby-themed silhouette dividers — same API as the original (pose + flip),
@@ -17,7 +17,7 @@ interface IconProps {
 const icons: Record<Pose, ComponentType<IconProps>> = {
   shooter: Horse,
   dunk: Trophy,
-  layup: Horseshoe,
+  layup: Horse,
   crossover: FlagCheckered,
 };
 
