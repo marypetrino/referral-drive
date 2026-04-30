@@ -24,7 +24,7 @@ export default function Home() {
   const [outreachOpen, setOutreachOpen] = useState(false);
 
   useEffect(() => {
-    const hasAuth = getCookie("mm_auth");
+    const hasAuth = getCookie("pf_auth");
     setAuthenticated(hasAuth === "true");
   }, []);
 
@@ -32,7 +32,7 @@ export default function Home() {
   if (authenticated === null) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-arcade-dark">
-        <div className="text-4xl animate-bounce" style={{ animationDuration: "2s" }}>🏀</div>
+        <div className="text-4xl animate-bounce" style={{ animationDuration: "2s" }}>🐎</div>
       </div>
     );
   }
@@ -88,7 +88,7 @@ export default function Home() {
       <footer className="py-8 px-4 text-center">
         <SilhouetteDivider pose="dunk" />
         <p className="text-white/25 text-xs mt-2">
-          January &times; Carrara &mdash; March Madness 2026
+          Profound &times; Carrara &mdash; Derby Drive 2026
         </p>
       </footer>
 

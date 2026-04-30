@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const TARGET_DATE = new Date("2026-04-10T23:59:59-04:00"); // April 10, 2026 11:59 PM ET
+const TARGET_DATE = new Date("2026-06-01T23:59:59-04:00"); // June 1, 2026 11:59 PM ET
 
 interface TimeLeft {
   days: number;
@@ -50,7 +50,7 @@ export default function CountdownTimer() {
   if (isExpired) {
     return (
       <div className="pixel-heading text-neon-orange glow-orange text-lg">
-        GAME OVER
+        RACE OVER
       </div>
     );
   }

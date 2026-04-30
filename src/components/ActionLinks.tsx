@@ -5,7 +5,7 @@ import { Briefcase } from "@phosphor-icons/react";
 export default function ActionLinks() {
   return (
     <a
-      href="https://jobs.ashbyhq.com/january"
+      href="https://www.tryprofound.com/careers#open-roles"
       target="_blank"
       rel="noopener noreferrer"
       className="arcade-btn group flex items-center gap-4 bg-arcade-card border border-january-blue/20 rounded-xl p-5 hover:border-january-blue/50 transition-all"
@@ -16,7 +16,7 @@ export default function ActionLinks() {
           OPEN ROLES
         </h3>
         <p className="text-white/70 text-xs">
-          See all open roles. Browse the roster.
+          See all open roles. Browse the field.
         </p>
       </div>
     </a>

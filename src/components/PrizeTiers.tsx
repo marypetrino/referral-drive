@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Basketball, Bird, Star, Trophy, UsersThree, Lightning, Sparkle, SealCheck } from "@phosphor-icons/react";
+import { Horse, Bird, Star, Trophy, UsersThree, Lightning, Sparkle, SealCheck } from "@phosphor-icons/react";
 import { type ReactNode } from "react";
 
 const milestones: {
@@ -14,8 +14,8 @@ const milestones: {
   winner?: string;
 }[] = [
   {
-    name: "FIRST POSSESSION",
-    icon: <Basketball size={24} weight="duotone" className="text-neon-orange" />,
+    name: "POST POSITION",
+    icon: <Horse size={24} weight="duotone" className="text-neon-orange" />,
     threshold: "Submits first referral that reaches IPS",
     type: "race" as const,
     prizeLabel: "$100 GIFT CARD TO YOUR CHOICE OF:",
@@ -24,10 +24,9 @@ const milestones: {
       "Bathhouse",
       "NYC Arts Institution (MoMA, The Met)",
     ],
-    winner: "Meghan York",
   },
   {
-    name: "EARLY BIRD",
+    name: "MORNING WORKOUT",
     icon: <Bird size={24} weight="duotone" className="text-neon-orange" />,
     threshold: "Reach 5 referred candidates who pass IPS",
     type: "race" as const,
@@ -39,7 +38,7 @@ const milestones: {
     ],
   },
   {
-    name: "ALL-STAR",
+    name: "STAKES RACE",
     icon: <Star size={24} weight="duotone" className="text-neon-yellow" />,
     threshold: "5 referrals who pass the Hiring Manager Screen",
     type: "open" as const,
@@ -51,7 +50,7 @@ const milestones: {
     ],
   },
   {
-    name: "CHAMPION",
+    name: "WINNER'S CIRCLE",
     icon: <Trophy size={24} weight="duotone" className="text-neon-yellow" />,
     threshold: "3 referrals who get hired",
     type: "open" as const,
@@ -59,7 +58,7 @@ const milestones: {
     options: ["EightSleep Pod", "Rimowa Classic Cabin Suitcase", "Peloton Bike"],
   },
   {
-    name: "WINNING TEAM",
+    name: "WINNING STABLE",
     icon: <UsersThree size={24} weight="duotone" className="text-neon-orange" />,
     threshold: "Team with the most total referrals passed HMS",
     type: "open" as const,
@@ -158,7 +157,7 @@ export default function PrizeTiers() {
         >
           <div
             className="rounded-2xl border-2 border-january-blue/30 overflow-hidden"
-            style={{ boxShadow: "0 0 40px rgba(0,26,161,0.15), inset 0 0 40px rgba(0,26,161,0.04)" }}
+            style={{ boxShadow: "0 0 40px rgba(55,108,255,0.15), inset 0 0 40px rgba(55,108,255,0.04)" }}
           >
             {/* Cabinet header bar */}
             <div className="relative bg-[#080c1a] border-b-2 border-january-blue/40 px-6 py-4">
@@ -255,7 +254,7 @@ export default function PrizeTiers() {
                 className="relative rounded-xl p-4 overflow-hidden border border-january-blue/20"
                 style={{
                   background: i % 2 === 0 ? "#0d1225" : "#0a0f1e",
-                  boxShadow: "0 0 15px rgba(0,26,161,0.08)",
+                  boxShadow: "0 0 15px rgba(55,108,255,0.08)",
                 }}
               >
                 <div className="absolute inset-0 pointer-events-none opacity-30" style={{

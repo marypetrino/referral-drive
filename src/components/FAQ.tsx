@@ -10,7 +10,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Who is eligible to participate?",
-    a: "All January employees are eligible to participate except: VPs and above, Talent team members, and hiring managers referring for their own roles. Internal candidates are also not bonus-eligible.",
+    a: "All Profound employees are eligible to participate except: VPs and above, Talent team members, and hiring managers referring for their own roles. Internal candidates are also not bonus-eligible.",
   },
   {
     q: "How do I submit a referral?",
@@ -22,15 +22,15 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When does the contest run?",
-    a: "The contest opens March 24, 2026 and closes 11:59 PM ET on April 10, 2026. All referrals must be entered into Ashby by that deadline to qualify for 2x bonuses and milestone prizes.",
+    a: "The contest opens May 4, 2026 and closes 11:59 PM ET on June 1, 2026. All referrals must be entered into Ashby by that deadline to qualify for milestone prizes.",
   },
   {
     q: "What if I have a great person in mind but I'm not sure which role fits?",
-    a: "Refer them anyway. Submit to the \"Future Opportunities\" role in Ashby and we'll route them to the right pipeline. Don't let a role match question stop you from making the intro.",
+    a: "Pick the role you think best aligns with their experience and submit them there — the talent team will review and redirect their application to the right role if needed. Don't let a role question stop you from making the intro.",
   },
   {
     q: "What if my referral was submitted before the contest started?",
-    a: "Only referrals submitted during the March Madness window (March 24 – April 10) qualify for 2x bonuses and milestone prizes. Prior referrals follow the standard program.",
+    a: "Only referrals submitted during the Derby Drive window (May 4 – June 1) qualify for milestone prizes. Prior referrals follow the standard program.",
   },
   {
     q: "Can I refer someone who already applied or is already in the pipeline?",
@@ -42,7 +42,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When are prizes and bonuses paid out?",
-    a: "Milestone prizes are awarded within 30 days after the contest ends. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends. The 2x bonus applies to any referral submitted between March 24 and 11:59 PM ET on April 10, regardless of when the hire closes.",
+    a: "Milestone prizes are awarded within 30 days after the contest ends. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends.",
   },
   {
     q: "Do standard referral program rules still apply?",

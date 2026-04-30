@@ -4,43 +4,39 @@ import { motion } from "framer-motion";
 
 const tiers = [
   {
-    name: "BUZZER BEATER",
-    bonus: "$10,000",
+    name: "TRIPLE CROWN",
+    bonus: "$30,000",
     color: "neon-orange",
-    description: "The highest-impact technical roles on our roadmap — hardest to source, biggest signal.",
+    description: "The highest-impact technical and ML roles on our roadmap — hardest to source, biggest signal.",
     roles: [
-      "Engineering Manager",
       "Senior Software Engineer",
-      "Senior Data Engineer",
-      "Senior SRE",
-      "Senior Security Engineer",
+      "Machine Learning Engineer",
+      "Data Engineer",
+      "Data Platform",
     ],
   },
   {
-    name: "SLAM DUNK",
-    bonus: "$6,000",
+    name: "DERBY WINNER",
+    bonus: "$15,000",
     color: "january-blue-light",
-    description: "Core technical builders behind the product — the people who make the team around them better.",
+    description: "Product leaders shaping where Profound goes next — the people who turn strategy into shipped product.",
     roles: [
-      "Senior Product Manager",
-      "Staff Product Manager (AI Agents)",
-      "Software Engineer (Mid-Level)",
-      "Senior Data Scientist (Product Analytics)",
+      "Product Manager, AI",
+      "Product Manager, Analytics",
+      "Product Manager, Verticals",
     ],
   },
   {
-    name: "FAST BREAK",
-    bonus: "$4,000",
+    name: "PHOTO FINISH",
+    bonus: "$7,500",
     color: "neon-yellow",
-    description: "The operators and strategists who keep January running and scaling, where the right person transforms the function.",
+    description: "The GTM, ops, and finance operators who turn Profound's product into a business — where the right person transforms the function.",
     roles: [
-      "Analyst (Client Ops)",
-      "Client Operations Manager",
-      "Senior Business Ops Associate",
-      "Senior Client Strategy Manager",
-      "Senior Implementation Consultant",
-      "Senior Manager of Marketing",
-      "Senior Recruiter",
+      "GTM Enablement",
+      "Solutions Consultant",
+      "Strategic Finance",
+      "Engagement Manager",
+      "SF Sales Manager",
     ],
   },
 ];
@@ -60,12 +56,12 @@ const colorMap: Record<string, {
   },
   "january-blue-light": {
     border: "border-january-blue/35",
-    borderHex: "rgba(0,51,204,0.35)",
+    borderHex: "rgba(55,108,255,0.35)",
     glow: "glow-blue",
     text: "text-january-blue-light",
-    chipBg: "rgba(0,26,161,0.12)",
-    chipBorder: "rgba(0,51,204,0.25)",
-    glowRgb: "0,51,204",
+    chipBg: "rgba(55,108,255,0.12)",
+    chipBorder: "rgba(55,108,255,0.25)",
+    glowRgb: "55,108,255",
   },
   "neon-yellow": {
     border: "border-neon-yellow/30",
@@ -95,8 +91,7 @@ export default function BonusTiers() {
           <h2 className="pixel-heading text-xl sm:text-2xl text-white glow-blue mb-3">
             REFERRAL BONUSES
           </h2>
-          <p className="pixel-heading text-[10px] text-neon-orange glow-orange mb-2">2X MULTIPLIER ACTIVE</p>
-          <p className="text-white/70 text-xs">Bonuses for the below open roles are doubled for March Madness.</p>
+          <p className="text-white/70 text-xs">Standard referral bonuses for the below open roles — paid out when your referral is hired.</p>
         </motion.div>
 
         {/* Cabinet frame wrapper */}
@@ -105,7 +100,7 @@ export default function BonusTiers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="rounded-2xl border-2 border-january-blue/30 overflow-hidden"
-          style={{ boxShadow: "0 0 40px rgba(0,26,161,0.15), inset 0 0 40px rgba(0,26,161,0.04)" }}
+          style={{ boxShadow: "0 0 40px rgba(55,108,255,0.15), inset 0 0 40px rgba(55,108,255,0.04)" }}
         >
           {/* Header bar */}
           <div className="relative bg-[#080c1a] border-b-2 border-january-blue/40 px-6 py-4">

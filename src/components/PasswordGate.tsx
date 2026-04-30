@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Basketball } from "@phosphor-icons/react";
+import { Horse } from "@phosphor-icons/react";
 
 export default function PasswordGate({ onSuccess }: { onSuccess: () => void }) {
   const [password, setPassword] = useState("");
@@ -38,20 +38,20 @@ export default function PasswordGate({ onSuccess }: { onSuccess: () => void }) {
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center bg-arcade-dark">
       <div className="w-full max-w-md px-6 text-center">
-        {/* Decorative basketball */}
+        {/* Decorative horse */}
         <div className="mb-8 animate-bounce" style={{ animationDuration: "2s" }}>
-          <Basketball size={64} weight="duotone" className="text-neon-orange mx-auto" />
+          <Horse size={64} weight="duotone" className="text-neon-orange mx-auto" />
         </div>
 
         <h1 className="pixel-heading text-2xl sm:text-3xl text-white glow-blue mb-4 leading-relaxed">
-          MARCH MADNESS<br />REFERRAL SPRINT
+          PROFOUND<br />DERBY DRIVE
         </h1>
         <p className="text-white/70 text-sm mb-8 font-medium tracking-wide uppercase">
-          January Referral Drive 2026
+          Profound Referral Drive 2026
         </p>
 
         <p className="pixel-heading text-xs text-neon-orange glow-orange mb-6">
-          ENTER THE ARENA
+          ENTER THE PADDOCK
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">

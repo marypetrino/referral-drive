@@ -59,7 +59,7 @@ export async function GET() {
     const rows: string[][] = json.values || [];
 
     // Row 0 is headers (row 3 in sheet), data starts at row 1+
-    // Cols: B=Name, C=Total Referrals, D=Counted Referrals, E=IPS, F=HMS, G=Panel, H=Final, I=Offer, J=Hired, K=Scoring, L=All-star?, M=Champion?
+    // Cols: B=Name, C=Total Referrals, D=Counted Referrals, E=Initial Screen, F=Skills Assessment, G=Take Home, H=Eng Onsite/GTM Final Step, I=References/Investor Call, J=Hired, K=Scoring, L=All-star?, M=Champion?
     const entries: LeaderboardEntry[] = rows
       .slice(1)
       .filter((row) => row[0]?.trim()) // skip empty rows
@@ -81,7 +81,9 @@ export async function GET() {
     // Sort by most advanced visible stage first: Hires → Final → HMS → IPS → Referrals
     entries.sort((a, b) => {
       if (b.hires !== a.hires) return b.hires - a.hires;
+      if (b.at_offer !== a.at_offer) return b.at_offer - a.at_offer;
       if (b.at_final !== a.at_final) return b.at_final - a.at_final;
+      if (b.at_panel !== a.at_panel) return b.at_panel - a.at_panel;
       if (b.at_hms !== a.at_hms) return b.at_hms - a.at_hms;
       if (b.at_ips !== a.at_ips) return b.at_ips - a.at_ips;
       return b.counted_referrals - a.counted_referrals;

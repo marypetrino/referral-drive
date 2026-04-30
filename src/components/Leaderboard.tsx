@@ -57,24 +57,30 @@ function ComingSoon() {
   return (
     <div className="relative rounded-xl border border-january-blue/20 bg-arcade-card/80 overflow-hidden">
       {/* Faded table header */}
-      <div className="grid grid-cols-7 gap-2 px-4 py-3 border-b border-january-blue/10 text-[10px] pixel-heading text-muted/40">
+      <div className="grid grid-cols-10 gap-2 px-4 py-3 border-b border-january-blue/10 text-[10px] pixel-heading text-muted/40">
         <span>RANK</span>
         <span className="col-span-2">NAME</span>
         <span>REF</span>
-        <span>IPS</span>
-        <span>HMS</span>
-        <span>HIRES</span>
+        <span>INITIAL</span>
+        <span>SKILLS</span>
+        <span>TAKE HOME</span>
+        <span>ONSITE</span>
+        <span>REFS</span>
+        <span>HIRED</span>
       </div>
 
       {/* Faded placeholder rows */}
       {[...Array(5)].map((_, i) => (
         <div
           key={i}
-          className="grid grid-cols-7 gap-2 px-4 py-3 border-b border-white/5"
+          className="grid grid-cols-10 gap-2 px-4 py-3 border-b border-white/5"
           style={{ opacity: 0.15 - i * 0.02 }}
         >
           <div className="h-4 bg-white/20 rounded w-6" />
           <div className="col-span-2 h-4 bg-white/20 rounded w-24" />
+          <div className="h-4 bg-white/20 rounded w-6" />
+          <div className="h-4 bg-white/20 rounded w-6" />
+          <div className="h-4 bg-white/20 rounded w-6" />
           <div className="h-4 bg-white/20 rounded w-6" />
           <div className="h-4 bg-white/20 rounded w-6" />
           <div className="h-4 bg-white/20 rounded w-6" />
@@ -115,12 +121,14 @@ function MobileCard({ entry, rank }: { entry: LeaderboardEntry; rank: number }) 
           <AnimatedNumber value={entry.counted_referrals} /> REF
         </span>
       </div>
-      <div className="grid grid-cols-4 gap-2 text-center">
+      <div className="grid grid-cols-3 gap-2 text-center">
         {[
-          { label: "IPS", val: entry.at_ips },
-          { label: "HMS", val: entry.at_hms },
-          { label: "FINAL", val: entry.at_final },
-          { label: "HIRES", val: entry.hires },
+          { label: "INITIAL", val: entry.at_ips },
+          { label: "SKILLS", val: entry.at_hms },
+          { label: "TAKE HOME", val: entry.at_panel },
+          { label: "ONSITE", val: entry.at_final },
+          { label: "REFS", val: entry.at_offer },
+          { label: "HIRED", val: entry.hires },
         ].map((s) => (
           <div key={s.label} className="bg-arcade-dark rounded p-2">
             <div className="text-white text-sm font-bold"><AnimatedNumber value={s.val} /></div>
@@ -179,14 +187,16 @@ export default function Leaderboard() {
           <>
             {/* Desktop table */}
             <div className="hidden md:block rounded-xl border border-january-blue/20 bg-arcade-card/80 overflow-hidden">
-              <div className="grid grid-cols-8 gap-2 px-4 py-3 border-b border-january-blue/20 text-[10px] pixel-heading text-muted">
+              <div className="grid grid-cols-10 gap-2 px-4 py-3 border-b border-january-blue/20 text-[10px] pixel-heading text-muted">
                 <span>RANK</span>
                 <span className="col-span-2">NAME</span>
                 <span className="text-center">REFERRALS</span>
-                <span className="text-center">IPS</span>
-                <span className="text-center">HMS</span>
-                <span className="text-center">FINAL</span>
-                <span className="text-center">HIRES</span>
+                <span className="text-center">INITIAL</span>
+                <span className="text-center">SKILLS</span>
+                <span className="text-center">TAKE HOME</span>
+                <span className="text-center">ONSITE</span>
+                <span className="text-center">REFS</span>
+                <span className="text-center">HIRED</span>
               </div>
               {entries.map((entry, i) => {
                 const rank = i + 1;
@@ -198,14 +208,16 @@ export default function Leaderboard() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
-                    className={`grid grid-cols-8 gap-2 px-4 py-3 items-center border-b border-white/5 ${isTop3 ? "fire-border" : ""}`}
+                    className={`grid grid-cols-10 gap-2 px-4 py-3 items-center border-b border-white/5 ${isTop3 ? "fire-border" : ""}`}
                   >
                     <div><RankBadge rank={rank} /></div>
                     <div className="col-span-2 text-white font-semibold text-sm">{entry.employee_name}</div>
                     <div className="text-center text-white font-bold"><AnimatedNumber value={entry.counted_referrals} delay={i * 100} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_ips} delay={i * 100 + 50} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_hms} delay={i * 100 + 100} /></div>
+                    <div className="text-center text-white/60"><AnimatedNumber value={entry.at_panel} delay={i * 100 + 125} /></div>
                     <div className="text-center text-white/60"><AnimatedNumber value={entry.at_final} delay={i * 100 + 150} /></div>
+                    <div className="text-center text-white/60"><AnimatedNumber value={entry.at_offer} delay={i * 100 + 175} /></div>
                     <div className="text-center text-neon-orange font-bold"><AnimatedNumber value={entry.hires} delay={i * 100 + 200} /></div>
                   </motion.div>
                 );

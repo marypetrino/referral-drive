@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
 
   if (password === sitePassword) {
     const response = NextResponse.json({ success: true });
-    response.cookies.set("mm_auth", "true", {
+    response.cookies.set("pf_auth", "true", {
       httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  const cookie = request.cookies.get("mm_auth");
+  const cookie = request.cookies.get("pf_auth");
   if (cookie?.value === "true") {
     return NextResponse.json({ authenticated: true });
   }

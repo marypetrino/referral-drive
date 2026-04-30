@@ -66,39 +66,35 @@ function HighlightedText({ text }: { text: string }) {
 // ─── Role options ─────────────────────────────────────────────────────────────
 
 const ROLE_OPTIONS = [
-  "Analyst, Client Operations",
-  "Client Operations Manager",
-  "Senior Business Operations Associate",
-  "Senior Client Strategy Manager",
-  "Senior Implementation Consultant",
-  "Engineering Manager",
-  "Senior Security Engineer",
   "Senior Software Engineer",
-  "Senior SRE, Software Engineering",
-  "Software Engineer",
-  "Associate General Counsel - Product & Regulatory",
-  "Senior Manager of Marketing",
-  "Senior Recruiter",
-  "Senior Data Engineer",
-  "Senior Data Scientist, Product Analytics",
-  "Senior/Staff Product Manager, AI Agents",
+  "Machine Learning Engineer",
+  "Data Engineer",
+  "Data Platform",
+  "Product Manager, AI",
+  "Product Manager, Analytics",
+  "Product Manager, Verticals",
+  "GTM Enablement",
+  "Solutions Consultant",
+  "Strategic Finance",
+  "Engagement Manager",
+  "SF Sales Manager",
 ];
 
 // ─── Copy blocks ──────────────────────────────────────────────────────────────
 
 const SUBJECT_LINES = {
-  a: "Thought of you — {{roleTitle}} at January",
-  b: "{{roleTitle}} @ January",
+  a: "Thought of you — {{roleTitle}} at Profound",
+  b: "{{roleTitle}} @ Profound",
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}}, it's been a while! I've been working at a fintech called January and we're hiring {{a/an}} {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
-  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, a fintech called January, is hiring {{a/an}} {{roleTitle}} and I think you'd be a great fit. We're building the infrastructure to make consumer credit work better for everyone, and have helped millions of people get out of financial distress. It's honestly one of the most fulfilling jobs I've had.",
+  a: "Hey {{candidateName}}, it's been a while! I've been working at Profound and we're hiring {{a/an}} {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
+  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, Profound, is hiring {{a/an}} {{roleTitle}} and I think you'd be a great fit. We're building the platform brands use to understand and shape how AI models talk about them — it's been one of the most exciting jobs I've had.",
 };
 
 const COMPANY_PITCH = {
-  a: "Some background on what we do: January is building the AI platform that allows consumers to resolve their debt and regain financial freedom. We're scaling that massively through data-driven personalization and AI trained on billions of interactions. We're having incredible impact — consumers rate us 50% higher than the creditors who referred them!",
-  b: "Our first product has already serviced 15M+ Americans and nearly $20B in debt and we've hit tens of millions in revenue. We just launched our second product, have best-in-class software metrics across growth, retention, margins, and expansion, and are at the most exciting inflection point in our history.",
+  a: "Some background on what we do: Profound is the platform brands use to measure and influence how they show up across AI answer engines — ChatGPT, Perplexity, Gemini, and the rest. As search shifts from blue links to AI answers, every brand needs a way to understand and shape that surface, and Profound is the standard for it.",
+  b: "We work with some of the biggest brands in the world, the team is stacked, and we're at the most exciting inflection point in our history. We've raised $96M in Series C funding at a $1B valuation — and we're just getting started.",
 };
 
 const CTAS = {
@@ -107,8 +103,8 @@ const CTAS = {
 };
 
 const TEXT_TEMPLATES = {
-  a: "Hey {{candidateName}}, been awhile! I've been working at a fintech startup called January which has been an awesome journey so far - have found the work we're doing to be super fulfilling. We're hiring {{a/an}} {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
-  b: "Hey {{candidateName}}! Hope all is well in your world. I've been working at a fintech startup called January helping millions of people get out of financial distress, and has been an awesome journey thus far. Things are really starting to pick up - our flagship product has already serviced 15M+ Americans and nearly $20B in debt, we've hit tens of millions in annual revenue, and there's lots of momentum. I thought of you for {{a/an}} {{roleTitle}} we're hiring for since think it could be a great fit. Open to hearing more about it?",
+  a: "Hey {{candidateName}}, been awhile! I've been working at Profound which has been an awesome ride so far — work has been super energizing. We're hiring {{a/an}} {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
+  b: "Hey {{candidateName}}! Hope all is well. I've been working at Profound — we're the platform brands use to measure and shape how AI models talk about them — and the momentum has been wild. We just raised $96M Series C at a $1B valuation and are at one of the most exciting inflection points in our history. Thought of you for {{a/an}} {{roleTitle}} we're hiring for since I think it could be a great fit. Open to hearing more about it?",
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -270,7 +266,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative w-full max-w-5xl max-h-[90vh] bg-arcade-card border border-january-blue/25 rounded-2xl overflow-hidden flex flex-col" style={{ boxShadow: "0 0 60px rgba(0,26,161,0.2)" }}>
+      <div className="relative w-full max-w-5xl max-h-[90vh] bg-arcade-card border border-january-blue/25 rounded-2xl overflow-hidden flex flex-col" style={{ boxShadow: "0 0 60px rgba(55,108,255,0.2)" }}>
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-january-blue/15">
           <h2 className="pixel-heading text-sm text-white glow-blue">OUTREACH BUILDER</h2>
@@ -368,7 +364,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                       }}
                       options={[
                         { value: "a", label: "Thought of you — Role" },
-                        { value: "b", label: "Role @ January" },
+                        { value: "b", label: "Role @ Profound" },
                       ]}
                     />
                   )}

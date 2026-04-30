@@ -3,8 +3,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "March Madness | January Referral Hub",
-  description: "January's March Madness referral drive — submit referrals, check the leaderboard, and win prizes.",
+  title: "Profound Derby Drive | Profound Referral Hub",
+  description: "Profound's Derby Drive referral contest — submit referrals, check the leaderboard, and win prizes.",
 };
 
 export default function RootLayout({

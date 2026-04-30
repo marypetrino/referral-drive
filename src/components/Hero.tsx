@@ -3,7 +3,7 @@
 import CountdownTimer from "./CountdownTimer";
 import SwooshAnimation, { useSwoosh } from "./SwooshAnimation";
 import { useCallback } from "react";
-import { Basketball, ArrowDown } from "@phosphor-icons/react";
+import { Horse, ArrowDown } from "@phosphor-icons/react";
 
 export default function Hero() {
   const { playing, trigger: triggerSwoosh } = useSwoosh();
@@ -26,17 +26,17 @@ export default function Hero() {
       {/* Background glow orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-january-blue/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Basketball icon */}
+      {/* Horse icon */}
       <div className="mb-6 animate-bounce" style={{ animationDuration: "2s" }}>
-        <Basketball size={72} weight="duotone" className="text-neon-orange sm:w-[96px] sm:h-[96px]" />
+        <Horse size={72} weight="duotone" className="text-neon-orange sm:w-[96px] sm:h-[96px]" />
       </div>
 
       <h1 className="pixel-heading text-3xl sm:text-5xl lg:text-6xl text-white glow-blue mb-3 leading-tight tracking-wider">
-        MARCH MADNESS<br />REFERRAL SPRINT
+        PROFOUND<br />DERBY DRIVE
       </h1>
 
       <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed mt-3">
-        Referrals are how we find our best people. From March 24 through April 10, every bonus is doubled and top referrers win big. Think of someone great — and send them our way.
+        Know someone who could shape the future of AI? From May 4 through June 1, submit your best referrals and top referrers win big. A successful hire earns you our $30,000 referral bonus — the last time we&apos;ll offer it at this level. Don&apos;t sit on a great name.
       </p>
 
       {/* Countdown */}
