@@ -78,6 +78,8 @@ const ROLE_OPTIONS = [
   "Strategic Finance",
   "Engagement Manager",
   "SF Sales Manager",
+  "Recruiter",
+  "Recruiting Coordinator",
 ];
 
 // ─── Copy blocks ──────────────────────────────────────────────────────────────

@@ -37,6 +37,8 @@ const tiers = [
       "Strategic Finance",
       "Engagement Manager",
       "SF Sales Manager",
+      "Recruiter",
+      "Recruiting Coordinator",
     ],
   },
 ];

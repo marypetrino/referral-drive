@@ -108,6 +108,22 @@ const roleBlurbs: RoleBlurb[] = [
     tierBorderHex: "rgba(255,215,0,0.2)",
     tierAccentRgb: "255,215,0",
   },
+  {
+    title: "Recruiter",
+    blurb: "Full-cycle recruiter to source, screen, and close top-tier talent across Profound's pipeline. Drives quality and velocity in equal measure.",
+    tier: "PHOTO FINISH",
+    tierColor: "text-neon-yellow",
+    tierBorderHex: "rgba(255,215,0,0.2)",
+    tierAccentRgb: "255,215,0",
+  },
+  {
+    title: "Recruiting Coordinator",
+    blurb: "Talent ops partner who keeps Profound's hiring engine running — schedules interviews, manages candidate experience, and makes the recruiting team faster.",
+    tier: "PHOTO FINISH",
+    tierColor: "text-neon-yellow",
+    tierBorderHex: "rgba(255,215,0,0.2)",
+    tierAccentRgb: "255,215,0",
+  },
 ];
 
 const SCANLINES = {
