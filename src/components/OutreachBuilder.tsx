@@ -95,10 +95,7 @@ const OPENERS = {
   b: "Hey {{candidateName}}! My company Profound is hiring {{a/an}} {{roleTitle}} and I think you'd be great for it. We're the platform brands use to track and shape how AI models talk about them — it's been a wild ride.",
 };
 
-const COMPANY_PITCH = {
-  a: "Quick context: Profound is how brands measure and influence how they show up in AI answers — ChatGPT, Perplexity, Gemini, all of them. Search is shifting from links to AI-generated answers and every major brand needs this.",
-  b: "We just raised a $96M Series C at a billion-dollar valuation, work with some of the biggest brands in the world, and the team is really strong. Here's a recent piece on what it's like working here: https://nextplayso.substack.com/p/should-you-join-profound",
-};
+const COMPANY_PITCH_TRACTION = "We just raised a $96M Series C at a $1B valuation, work with some of the biggest brands in the world, and the team is really strong. Here's a recent piece on what it's like working here: https://nextplayso.substack.com/p/should-you-join-profound";
 
 const CTAS = {
   a: "Would love to catch up and tell you more if you're interested.",
@@ -210,7 +207,6 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
   // Block toggles
   const [subjectOn, setSubjectOn] = useState(true);
   const [openerOn, setOpenerOn] = useState(true);
-  const [pitchMissionOn, setPitchMissionOn] = useState(true);
   const [pitchTractionOn, setPitchTractionOn] = useState(true);
   const [ctaOn, setCtaOn] = useState(true);
 
@@ -238,8 +234,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
 
     const parts: string[] = [];
     if (openerOn) parts.push(fill(OPENERS[openerVar], inputs));
-    if (pitchMissionOn) parts.push(fill(COMPANY_PITCH.a, inputs));
-    if (pitchTractionOn) parts.push(fill(COMPANY_PITCH.b, inputs));
+    if (pitchTractionOn) parts.push(fill(COMPANY_PITCH_TRACTION, inputs));
     if (ctaOn) parts.push(fill(CTAS[ctaVar], inputs));
 
     // Sign off
@@ -247,7 +242,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
     parts.push(name);
 
     return parts.join("\n\n");
-  }, [channel, inputs, openerOn, openerVar, pitchMissionOn, pitchTractionOn, ctaOn, ctaVar, textVar]);
+  }, [channel, inputs, openerOn, openerVar, pitchTractionOn, ctaOn, ctaVar, textVar]);
 
   const subjectLine = useMemo(() => {
     if (channel === "email" && subjectOn) {
@@ -385,11 +380,7 @@ export default function OutreachBuilder({ open, onClose }: { open: boolean; onCl
                   />
 
                   <div className="flex items-center justify-between py-2 border-b border-white/5">
-                    <Toggle label="Company Pitch (Mission)" checked={pitchMissionOn} onChange={setPitchMissionOn} />
-                  </div>
-
-                  <div className="flex items-center justify-between py-2 border-b border-white/5">
-                    <Toggle label="Company Pitch (Traction)" checked={pitchTractionOn} onChange={setPitchTractionOn} />
+                    <Toggle label="Company Pitch" checked={pitchTractionOn} onChange={setPitchTractionOn} />
                   </div>
 
                   <BlockRow
