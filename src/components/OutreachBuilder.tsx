@@ -77,6 +77,7 @@ const ROLE_OPTIONS = [
   "Solutions Consultant",
   "Strategic Finance",
   "Engagement Manager",
+  "Manager, Engagement Management, Enterprise",
   "SF Sales Manager",
   "Recruiter",
   "Recruiting Coordinator",
@@ -90,23 +91,23 @@ const SUBJECT_LINES = {
 };
 
 const OPENERS = {
-  a: "Hey {{candidateName}}, it's been a while! I've been working at Profound and we're hiring {{a/an}} {{roleTitle}}. We're growing massively and I think you'd be a great fit for our team.",
-  b: "Hey {{candidateName}}! Hope you're doing well. I'm reaching out because my company, Profound, is hiring {{a/an}} {{roleTitle}} and I think you'd be a great fit. We're building the platform brands use to understand and shape how AI models talk about them — it's been one of the most exciting jobs I've had.",
+  a: "Hey {{candidateName}} — been a while! I'm at Profound and we're hiring {{a/an}} {{roleTitle}}. Thought of you right away.",
+  b: "Hey {{candidateName}}! My company Profound is hiring {{a/an}} {{roleTitle}} and I think you'd be great for it. We're the platform brands use to track and shape how AI models talk about them — it's been a wild ride.",
 };
 
 const COMPANY_PITCH = {
-  a: "Some background on what we do: Profound is the platform brands use to measure and influence how they show up across AI answer engines — ChatGPT, Perplexity, Gemini, and the rest. As search shifts from blue links to AI answers, every brand needs a way to understand and shape that surface, and Profound is the standard for it.",
-  b: "We work with some of the biggest brands in the world, the team is stacked, and we're at the most exciting inflection point in our history. We've raised $96M in Series C funding at a $1B valuation — and we're just getting started.",
+  a: "Quick context: Profound is how brands measure and influence how they show up in AI answers — ChatGPT, Perplexity, Gemini, all of them. Search is shifting from links to AI-generated answers and every major brand needs this.",
+  b: "We just raised a $96M Series C at a billion-dollar valuation, work with some of the biggest brands in the world, and the team is really strong. Here's a recent piece on what it's like working here: https://nextplayso.substack.com/p/should-you-join-profound",
 };
 
 const CTAS = {
-  a: "I'd love to catch up and share more!",
-  b: "I'd love to connect you with the team to see if there might be a fit if you're open to it!",
+  a: "Would love to catch up and tell you more if you're interested.",
+  b: "Happy to connect you with the team if you're open to it — no pressure.",
 };
 
 const TEXT_TEMPLATES = {
-  a: "Hey {{candidateName}}, been awhile! I've been working at Profound which has been an awesome ride so far — work has been super energizing. We're hiring {{a/an}} {{roleTitle}} and you were the first person I thought of. Would love to chat a bit or share more if you think it might be of interest?",
-  b: "Hey {{candidateName}}! Hope all is well. I've been working at Profound — we're the platform brands use to measure and shape how AI models talk about them — and the momentum has been wild. We just raised $96M Series C at a $1B valuation and are at one of the most exciting inflection points in our history. Thought of you for {{a/an}} {{roleTitle}} we're hiring for since I think it could be a great fit. Open to hearing more about it?",
+  a: "Hey {{candidateName}} — been a while! I'm at Profound and it's been great. We're hiring {{a/an}} {{roleTitle}} and you were the first person I thought of. Would love to chat if you're interested. Here's a bit on what it's like here: https://nextplayso.substack.com/p/should-you-join-profound",
+  b: "Hey {{candidateName}}! I'm at Profound — we help brands track and shape how AI models talk about them. Just raised Series C at a billion-dollar valuation and hiring hard. We're looking for {{a/an}} {{roleTitle}} and I think you'd be a great fit. Open to hearing more?",
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────

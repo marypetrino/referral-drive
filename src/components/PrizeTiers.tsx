@@ -238,7 +238,7 @@ export default function PrizeTiers() {
               <span><span className="text-emerald-400/75 font-semibold">ANYONE</span> — Everyone who hits it wins</span>
             </div>
           </div>
-          <p className="text-white/70 text-xs text-center mt-3">Only the open roles listed above count towards milestone prizes.</p>
+          <p className="text-white/70 text-xs text-center mt-3">Milestone prizes count referrals for every open role — not just the highlighted ones.</p>
         </motion.div>
 
         {/* Mobile cards */}
@@ -290,7 +290,7 @@ export default function PrizeTiers() {
               <span><span className="text-emerald-400/75 font-semibold">ANYONE</span> — Everyone who hits it wins</span>
             </div>
           </div>
-          <p className="text-white/70 text-xs text-center mt-3">Only the open roles listed above count towards milestone prizes.</p>
+          <p className="text-white/70 text-xs text-center mt-3">Milestone prizes count referrals for every open role — not just the highlighted ones.</p>
         </div>
       </div>
     </section>

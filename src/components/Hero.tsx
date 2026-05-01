@@ -36,7 +36,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed mt-3">
-        Know someone who could shape the future of AI? From May 4 through June 1, submit your best referrals and top referrers win big. A successful hire earns you our $30,000 referral bonus — the last time we&apos;ll offer it at this level. Don&apos;t sit on a great name.
+        We&apos;re hiring hard right now — May 4 through June 4. Refer someone great, earn up to $30K when they&apos;re hired, and compete for milestone prizes along the way. This is the last month we&apos;re offering bonuses at this level. If you&apos;ve been sitting on a name, now&apos;s the time.
       </p>
 
       {/* Countdown */}

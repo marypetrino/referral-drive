@@ -22,7 +22,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "When does the contest run?",
-    a: "The contest opens May 4, 2026 and closes 11:59 PM ET on June 1, 2026. All referrals must be entered into Ashby by that deadline to qualify for milestone prizes.",
+    a: "May 4 through June 4, 2026. All referrals must be entered into Ashby by 11:59 PM ET on June 4 to qualify for milestone prizes. We may extend — but don't count on it.",
   },
   {
     q: "What if I have a great person in mind but I'm not sure which role fits?",
@@ -30,7 +30,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What if my referral was submitted before the contest started?",
-    a: "Only referrals submitted during the Derby Drive window (May 4 – June 1) qualify for milestone prizes. Prior referrals follow the standard program.",
+    a: "Only referrals submitted during the Derby Drive window (May 4 – June 4) qualify for milestone prizes. Prior referrals follow the standard program.",
   },
   {
     q: "Can I refer someone who already applied or is already in the pipeline?",
@@ -43,6 +43,14 @@ const faqs: { q: string; a: string }[] = [
   {
     q: "When are prizes and bonuses paid out?",
     a: "Milestone prizes are awarded within 30 days after the contest ends. Referral bonuses are paid in the first pay cycle after your referral is hired and completes their first 30 days. Since hiring timelines vary, bonus payouts may come well after the contest ends.",
+  },
+  {
+    q: "Are only the highlighted roles eligible?",
+    a: "No — all ~70 open roles on the Profound careers page are eligible for referral bonuses ($15K) and every milestone prize. The highlighted roles are just the ones we're pushing hardest this month and carry the $30K bonus.",
+  },
+  {
+    q: "Do milestone prizes apply to all roles?",
+    a: "Yes. Milestone prizes count referrals for every open role, not just the highlighted ones. A hire is a hire.",
   },
   {
     q: "Do standard referral program rules still apply?",

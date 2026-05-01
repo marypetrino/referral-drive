@@ -7,38 +7,34 @@ const tiers = [
     name: "TRIPLE CROWN",
     bonus: "$30,000",
     color: "neon-orange",
-    description: "The highest-impact technical and ML roles on our roadmap — hardest to source, biggest signal.",
+    description: "The roles we're pushing hardest right now. Hardest to fill, biggest impact.",
     roles: [
       "Senior Software Engineer",
       "Machine Learning Engineer",
       "Data Engineer",
-      "Data Platform",
+      "Product Manager, AI",
+      "Product Manager, Analytics",
+      "Product Manager, Verticals",
+      "GTM Enablement",
+      "Solutions Consultant",
+      "Strategic Finance",
+      "Engagement Manager",
+      "Manager, Engagement Management, Enterprise",
+      "SF Sales Manager",
+      "Recruiter",
+      "Recruiting Coordinator",
     ],
+    highlight: "Manager, Engagement Management, Enterprise",
+    highlightLink: "https://www.tryprofound.com/careers/15aa928a-2849-49e4-bef3-a4fc5e9a5a4c?from=careers",
   },
   {
     name: "DERBY WINNER",
     bonus: "$15,000",
     color: "january-blue-light",
-    description: "Product leaders shaping where Profound goes next — the people who turn strategy into shipped product.",
+    description: "Data Platform plus all other open roles on the Profound careers page.",
     roles: [
-      "Product Manager, AI",
-      "Product Manager, Analytics",
-      "Product Manager, Verticals",
-    ],
-  },
-  {
-    name: "PHOTO FINISH",
-    bonus: "$7,500",
-    color: "neon-yellow",
-    description: "The GTM, ops, and finance operators who turn Profound's product into a business — where the right person transforms the function.",
-    roles: [
-      "GTM Enablement",
-      "Solutions Consultant",
-      "Strategic Finance",
-      "Engagement Manager",
-      "SF Sales Manager",
-      "Recruiter",
-      "Recruiting Coordinator",
+      "Data Platform",
+      "All other open roles",
     ],
   },
 ];
@@ -93,7 +89,10 @@ export default function BonusTiers() {
           <h2 className="pixel-heading text-xl sm:text-2xl text-white glow-blue mb-3">
             REFERRAL BONUSES
           </h2>
-          <p className="text-white/70 text-xs">Standard referral bonuses for the below open roles — paid out when your referral is hired.</p>
+          <p className="text-white/70 text-xs">Paid out when your referral is hired.</p>
+          <p className="text-neon-orange text-xs font-semibold mt-2" style={{ textShadow: "0 0 12px rgba(255,107,43,0.4)" }}>
+            This is the last month we&apos;re offering $30K referral bonuses for these roles.
+          </p>
         </motion.div>
 
         {/* Cabinet frame wrapper */}
@@ -107,7 +106,7 @@ export default function BonusTiers() {
           {/* Header bar */}
           <div className="relative bg-[#080c1a] border-b-2 border-january-blue/40 px-6 py-4">
             <div style={SCANLINES} className="absolute inset-0 pointer-events-none" />
-            <div className="relative grid grid-cols-3 gap-4">
+            <div className="relative grid grid-cols-2 gap-4">
               {tiers.map((t) => (
                 <span key={t.name} className={`pixel-heading text-[10px] text-neon-orange tracking-wider`}>
                   {t.name}
@@ -118,7 +117,7 @@ export default function BonusTiers() {
           </div>
 
           {/* Cards row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-january-blue/15">
+          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-january-blue/15">
             {tiers.map((tier, i) => {
               const c = colorMap[tier.color];
               return (
@@ -155,18 +154,27 @@ export default function BonusTiers() {
 
                     {/* Role chips */}
                     <div className="space-y-1.5">
-                      {tier.roles.map((role) => (
-                        <div
-                          key={role}
-                          className="px-3 py-2 rounded-lg text-xs text-white font-medium border"
-                          style={{
-                            background: c.chipBg,
-                            borderColor: c.chipBorder,
-                          }}
-                        >
-                          {role}
-                        </div>
-                      ))}
+                      {tier.roles.map((role) => {
+                        const isHighlight = "highlight" in tier && role === tier.highlight;
+                        const link = isHighlight && "highlightLink" in tier ? (tier as typeof tiers[0]).highlightLink : null;
+                        const chip = (
+                          <div
+                            key={role}
+                            className={`px-3 py-2 rounded-lg text-xs text-white font-medium border ${isHighlight ? "ring-1 ring-neon-orange/50" : ""}`}
+                            style={{
+                              background: isHighlight ? "rgba(255,107,43,0.15)" : c.chipBg,
+                              borderColor: isHighlight ? "rgba(255,107,43,0.4)" : c.chipBorder,
+                            }}
+                          >
+                            {role}
+                            {isHighlight && <span className="ml-2 text-neon-orange text-[10px]">NEW</span>}
+                          </div>
+                        );
+                        if (link) {
+                          return <a key={role} href={link} target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity">{chip}</a>;
+                        }
+                        return chip;
+                      })}
                     </div>
                   </div>
                 </div>
@@ -174,6 +182,12 @@ export default function BonusTiers() {
             })}
           </div>
         </motion.div>
+
+        <p className="text-white/50 text-xs text-center mt-5 max-w-2xl mx-auto leading-relaxed">
+          These are the roles we&apos;re pushing hardest this month — but all ~70 open roles on our{" "}
+          <a href="https://www.tryprofound.com/careers#open-roles" target="_blank" rel="noopener noreferrer" className="text-january-blue-light underline underline-offset-2">careers page</a>{" "}
+          are eligible for referral bonuses ($15K) and every milestone prize.
+        </p>
       </div>
     </section>
   );

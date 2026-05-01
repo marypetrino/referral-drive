@@ -56,10 +56,10 @@ export default function Home() {
               <PencilLine size={32} weight="duotone" className="text-neon-orange shrink-0" />
               <div>
                 <h3 className="pixel-heading text-[10px] text-white mb-1 group-hover:text-january-blue-light transition-colors">
-                  BUILD YOUR OUTREACH
+                  WRITE YOUR MESSAGE
                 </h3>
                 <p className="text-white/70 text-xs">
-                  Craft a ready-to-send message in seconds.
+                  Grab a template and send it.
                 </p>
               </div>
             </button>
