@@ -92,7 +92,7 @@ export default function BonusTiers() {
           <h2 className="pixel-heading text-xl sm:text-2xl text-white glow-blue mb-3">
             REFERRAL BONUSES
           </h2>
-          <p className="text-white/70 text-xs">Paid out when your referral is hired.</p>
+          <p className="text-white/70 text-xs">Paid out after your referral is hired and completes their first 30 days.</p>
           <p className="text-neon-orange text-xs font-semibold mt-2" style={{ textShadow: "0 0 12px rgba(255,107,43,0.4)" }}>
             This may be one of the last times we&apos;re offering referral bonuses this high — take advantage! Off to the races.
           </p>
