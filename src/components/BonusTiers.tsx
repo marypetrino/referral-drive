@@ -22,7 +22,6 @@ const tiers = [
       "Manager, Engagement Management, Enterprise",
       "SF Sales Manager",
       "Recruiter",
-      "Recruiting Coordinator",
     ],
     highlight: "Manager, Engagement Management, Enterprise",
     highlightLink: "https://www.tryprofound.com/careers/15aa928a-2849-49e4-bef3-a4fc5e9a5a4c?from=careers",
@@ -31,10 +30,14 @@ const tiers = [
     name: "DERBY WINNER",
     bonus: "$15,000",
     color: "january-blue-light",
-    description: "Data Platform plus all other open roles on the Profound careers page.",
+    description: "High-impact roles we need to fill now.",
     roles: [
+      "Recruiting Coordinator",
       "Data Platform",
-      "All other open roles",
+      "Senior Commercial Counsel",
+      "Content Lead",
+      "Instructor, Profound University",
+      "Partner Enablement Lead",
     ],
   },
 ];
@@ -91,7 +94,7 @@ export default function BonusTiers() {
           </h2>
           <p className="text-white/70 text-xs">Paid out when your referral is hired.</p>
           <p className="text-neon-orange text-xs font-semibold mt-2" style={{ textShadow: "0 0 12px rgba(255,107,43,0.4)" }}>
-            This is the last month we&apos;re offering $30K referral bonuses for these roles.
+            This may be one of the last times we&apos;re offering referral bonuses this high — take advantage! Off to the races.
           </p>
         </motion.div>
 
@@ -186,7 +189,7 @@ export default function BonusTiers() {
         <p className="text-white/50 text-xs text-center mt-5 max-w-2xl mx-auto leading-relaxed">
           These are the roles we&apos;re pushing hardest this month — but all ~70 open roles on our{" "}
           <a href="https://www.tryprofound.com/careers#open-roles" target="_blank" rel="noopener noreferrer" className="text-january-blue-light underline underline-offset-2">careers page</a>{" "}
-          are eligible for referral bonuses ($15K) and every milestone prize.
+          are eligible for referral bonuses.
         </p>
       </div>
     </section>

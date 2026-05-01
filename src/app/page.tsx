@@ -7,7 +7,7 @@ import ActionLinks from "../components/ActionLinks";
 import Leaderboard from "../components/Leaderboard";
 import BonusTiers from "../components/BonusTiers";
 import RoleBlurbs from "../components/RoleBlurbs";
-import PrizeTiers from "../components/PrizeTiers";
+
 import FAQ from "../components/FAQ";
 import SilhouetteDivider from "../components/SilhouetteDivider";
 import OutreachBuilder from "../components/OutreachBuilder";
@@ -76,9 +76,6 @@ export default function Home() {
       <BonusTiers />
 
       <SilhouetteDivider pose="layup" />
-      <PrizeTiers />
-
-      <SilhouetteDivider pose="crossover" flip />
       <RoleBlurbs />
 
       <SilhouetteDivider pose="shooter" flip />

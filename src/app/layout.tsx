@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Profound Derby Drive | Profound Referral Hub",
-  description: "Profound's Derby Drive referral contest — submit referrals, check the leaderboard, and win prizes.",
+  description: "Profound's Derby Drive referral contest — submit referrals, check the leaderboard, and earn up to $30K.",
 };
 
 export default function RootLayout({
