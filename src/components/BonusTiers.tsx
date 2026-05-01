@@ -38,6 +38,10 @@ const tiers = [
       "Content Lead",
       "Instructor, Profound University",
       "Partner Enablement Lead",
+      "Social Distribution Lead",
+      "Content Marketing Manager",
+      "Partner Marketing Manager",
+      "Account Manager",
     ],
   },
 ];
@@ -191,6 +195,18 @@ export default function BonusTiers() {
           <a href="https://www.tryprofound.com/careers#open-roles" target="_blank" rel="noopener noreferrer" className="text-january-blue-light underline underline-offset-2">careers page</a>{" "}
           are eligible for referral bonuses.
         </p>
+
+        {/* New Grad callout */}
+        <div
+          className="mt-4 max-w-2xl mx-auto rounded-xl px-5 py-3 flex items-center gap-3 border border-january-blue/20"
+          style={{ background: "rgba(55,108,255,0.06)" }}
+        >
+          <span className="text-january-blue-light text-lg leading-none">🎓</span>
+          <p className="text-white/60 text-xs leading-relaxed">
+            <span className="text-white/90 font-semibold">New grad referral?</span>{" "}
+            Any new grad hire earns you a flat <span className="text-january-blue-light font-semibold">$5,000</span> referral bonus.
+          </p>
+        </div>
       </div>
     </section>
   );

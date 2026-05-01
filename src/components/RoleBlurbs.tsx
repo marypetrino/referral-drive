@@ -164,6 +164,38 @@ const roleBlurbs: RoleBlurb[] = [
     tierBorderHex: "rgba(91,141,239,0.25)",
     tierAccentRgb: "91,141,239",
   },
+  {
+    title: "Social Distribution Lead",
+    blurb: "Owns Profound's social presence and distribution strategy — turns our story into content that actually travels.",
+    tier: "DERBY WINNER",
+    tierColor: "text-[#5B8DEF]",
+    tierBorderHex: "rgba(91,141,239,0.25)",
+    tierAccentRgb: "91,141,239",
+  },
+  {
+    title: "Content Marketing Manager",
+    blurb: "Executes across the content calendar — blog, case studies, newsletters, campaigns. Fast and high-quality.",
+    tier: "DERBY WINNER",
+    tierColor: "text-[#5B8DEF]",
+    tierBorderHex: "rgba(91,141,239,0.25)",
+    tierAccentRgb: "91,141,239",
+  },
+  {
+    title: "Partner Marketing Manager",
+    blurb: "Co-markets with our integration and channel partners — builds programs that create mutual pipeline.",
+    tier: "DERBY WINNER",
+    tierColor: "text-[#5B8DEF]",
+    tierBorderHex: "rgba(91,141,239,0.25)",
+    tierAccentRgb: "91,141,239",
+  },
+  {
+    title: "Account Manager",
+    blurb: "Owns a book of existing customers — drives renewals, expansion, and long-term success. Relationship-first, commercially sharp.",
+    tier: "DERBY WINNER",
+    tierColor: "text-[#5B8DEF]",
+    tierBorderHex: "rgba(91,141,239,0.25)",
+    tierAccentRgb: "91,141,239",
+  },
 ];
 
 const SCANLINES = {
