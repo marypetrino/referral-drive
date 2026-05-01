@@ -99,7 +99,7 @@ const COMPANY_PITCH_TRACTION = "We just raised a $96M Series C at a $1B valuatio
 
 const CTAS = {
   a: "Would love to catch up and tell you more if you're interested.",
-  b: "Happy to connect you with the team if you're open to it — no pressure.",
+  b: "Happy to connect you with the team if you're open to it.",
 };
 
 const TEXT_TEMPLATES = {
