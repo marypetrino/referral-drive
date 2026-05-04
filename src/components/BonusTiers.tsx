@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 
 const tiers = [
   {
+    name: "TRIFECTA",
+    bonus: "$50,000",
+    color: "neon-yellow",
+    description: "Our three highest-priority PM roles. Rare, high-impact, and worth every penny.",
+    roles: [
+      "Product Manager, AI",
+      "Product Manager, Analytics",
+      "Product Manager, Verticals",
+    ],
+  },
+  {
     name: "TRIPLE CROWN",
     bonus: "$30,000",
     color: "neon-orange",
@@ -12,9 +23,6 @@ const tiers = [
       "Senior Software Engineer",
       "Machine Learning Engineer",
       "Data Engineer",
-      "Product Manager, AI",
-      "Product Manager, Analytics",
-      "Product Manager, Verticals",
       "GTM Enablement",
       "Solutions Consultant",
       "Strategic Finance",
@@ -113,7 +121,7 @@ export default function BonusTiers() {
           {/* Header bar */}
           <div className="relative bg-[#080c1a] border-b-2 border-january-blue/40 px-6 py-4">
             <div style={SCANLINES} className="absolute inset-0 pointer-events-none" />
-            <div className="relative grid grid-cols-2 gap-4">
+            <div className="relative grid grid-cols-3 gap-4">
               {tiers.map((t) => (
                 <span key={t.name} className={`pixel-heading text-[10px] text-neon-orange tracking-wider`}>
                   {t.name}
@@ -124,7 +132,7 @@ export default function BonusTiers() {
           </div>
 
           {/* Cards row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-january-blue/15">
+          <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-january-blue/15">
             {tiers.map((tier, i) => {
               const c = colorMap[tier.color];
               return (
