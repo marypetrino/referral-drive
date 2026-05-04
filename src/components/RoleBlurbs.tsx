@@ -191,10 +191,10 @@ const roleBlurbs: RoleBlurb[] = [
   {
     title: "Account Manager",
     blurb: "Owns a book of existing customers — drives renewals, expansion, and long-term success. Relationship-first, commercially sharp.",
-    tier: "DERBY WINNER",
-    tierColor: "text-[#5B8DEF]",
-    tierBorderHex: "rgba(91,141,239,0.25)",
-    tierAccentRgb: "91,141,239",
+    tier: "TRIPLE CROWN",
+    tierColor: "text-neon-orange",
+    tierBorderHex: "rgba(255,107,43,0.2)",
+    tierAccentRgb: "255,107,43",
   },
 ];
 

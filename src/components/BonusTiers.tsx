@@ -30,6 +30,7 @@ const tiers = [
       "Manager, Engagement Management, Enterprise",
       "SF Sales Manager",
       "Recruiter",
+      "Account Manager",
     ],
     highlight: "Manager, Engagement Management, Enterprise",
     highlightLink: "https://www.tryprofound.com/careers/15aa928a-2849-49e4-bef3-a4fc5e9a5a4c?from=careers",
@@ -49,7 +50,6 @@ const tiers = [
       "Social Distribution Lead",
       "Content Marketing Manager",
       "Partner Marketing Manager",
-      "Account Manager",
     ],
   },
 ];
