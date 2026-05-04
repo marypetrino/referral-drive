@@ -30,7 +30,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Data Engineer",
-    blurb: "Builds the pipelines behind our data products. Strong SQL/Python, comfortable with dbt, Dagster, Snowflake. Owns what they ship.",
+    blurb: "Owns the pipelines behind our data products. Strong SQL/Python, comfortable with dbt, Dagster, and Snowflake — and accountable for the reliability and quality of what they ship.",
     tier: "TRIPLE CROWN",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -38,7 +38,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Product Manager, AI",
-    blurb: "Owns the AI platform — agent builder, grids, knowledge base. Ships production-grade AI agent systems end to end.",
+    blurb: "Owns the AI platform — agent builder, background agents, grids, knowledge base. Ships production-grade agent experiences end to end, and identifies the opportunities that define what Profound's AI platform becomes.",
     tier: "TRIPLE CROWN",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -54,7 +54,7 @@ const roleBlurbs: RoleBlurb[] = [
   },
   {
     title: "Product Manager, Verticals",
-    blurb: "Owns vertical bets — shopping, ads, agencies, self-serve. The PM figuring out where Profound goes next.",
+    blurb: "PM who will own self-serve, shopping, ads, agencies, and new bets — the verticals taking Profound to its next stage of growth.",
     tier: "TRIPLE CROWN",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
@@ -125,8 +125,8 @@ const roleBlurbs: RoleBlurb[] = [
     tierAccentRgb: "91,141,239",
   },
   {
-    title: "Data Platform",
-    blurb: "Deeper than data engineering — the infrastructure layer. Distributed systems (Spark, Flink), observability, access control.",
+    title: "Software Engineer, Data Platform",
+    blurb: "Builds the infrastructure layer underneath our data products. Distributed systems (Spark, Flink), observability, access control.",
     tier: "DERBY WINNER",
     tierColor: "text-[#5B8DEF]",
     tierBorderHex: "rgba(91,141,239,0.25)",

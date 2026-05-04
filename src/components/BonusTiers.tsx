@@ -33,7 +33,7 @@ const tiers = [
     description: "High-impact roles we need to fill now.",
     roles: [
       "Recruiting Coordinator",
-      "Data Platform",
+      "Software Engineer, Data Platform",
       "Senior Commercial Counsel",
       "Content Lead",
       "Instructor, Profound University",
