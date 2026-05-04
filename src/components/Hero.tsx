@@ -36,7 +36,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-sm text-white/70 mb-10 max-w-lg leading-relaxed mt-3">
-        We&apos;re hiring hard right now — May 4 through June 4. Refer someone great and earn up to $30K cash when they&apos;re hired. This may be one of the last times we&apos;re offering bonuses this high. If you&apos;ve been sitting on a name, now&apos;s the time.
+        We&apos;re hiring hard right now — May 4 through June 4. Refer someone great and earn up to $50K cash when they&apos;re hired. This may be one of the last times we&apos;re offering bonuses this high. If you&apos;ve been sitting on a name, now&apos;s the time.
       </p>
 
       {/* Countdown */}
