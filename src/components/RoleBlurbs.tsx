@@ -13,30 +13,6 @@ interface RoleBlurb {
 
 const roleBlurbs: RoleBlurb[] = [
   {
-    title: "Senior Software Engineer",
-    blurb: "8+ years fullstack or backend. High ownership, ships without hand-holding, strong fundamentals.",
-    tier: "TRIPLE CROWN",
-    tierColor: "text-neon-orange",
-    tierBorderHex: "rgba(255,107,43,0.2)",
-    tierAccentRgb: "255,107,43",
-  },
-  {
-    title: "Machine Learning Engineer",
-    blurb: "Deep in LLM systems — RAG, prompting, fine-tuning, evals. Takes models from notebook to prod with clean code and product sense.",
-    tier: "TRIPLE CROWN",
-    tierColor: "text-neon-orange",
-    tierBorderHex: "rgba(255,107,43,0.2)",
-    tierAccentRgb: "255,107,43",
-  },
-  {
-    title: "Data Engineer",
-    blurb: "Owns the pipelines behind our data products. Strong SQL/Python, comfortable with dbt, Dagster, and Snowflake — and accountable for the reliability and quality of what they ship.",
-    tier: "TRIPLE CROWN",
-    tierColor: "text-neon-orange",
-    tierBorderHex: "rgba(255,107,43,0.2)",
-    tierAccentRgb: "255,107,43",
-  },
-  {
     title: "Product Manager, AI",
     blurb: "Owns the AI platform — agent builder, background agents, grids, knowledge base. Ships production-grade agent experiences end to end, and identifies the opportunities that define what Profound's AI platform becomes.",
     tier: "TRIFECTA",
@@ -71,6 +47,30 @@ const roleBlurbs: RoleBlurb[] = [
   {
     title: "Solutions Consultant",
     blurb: "Technical pre-sales — goes deep with prospects on how Profound fits their stack. Comfortable with customers and in the product.",
+    tier: "TRIPLE CROWN",
+    tierColor: "text-neon-orange",
+    tierBorderHex: "rgba(255,107,43,0.2)",
+    tierAccentRgb: "255,107,43",
+  },
+  {
+    title: "Senior Software Engineer",
+    blurb: "8+ years fullstack or backend. High ownership, ships without hand-holding, strong fundamentals.",
+    tier: "TRIPLE CROWN",
+    tierColor: "text-neon-orange",
+    tierBorderHex: "rgba(255,107,43,0.2)",
+    tierAccentRgb: "255,107,43",
+  },
+  {
+    title: "Machine Learning Engineer",
+    blurb: "Deep in LLM systems — RAG, prompting, fine-tuning, evals. Takes models from notebook to prod with clean code and product sense.",
+    tier: "TRIPLE CROWN",
+    tierColor: "text-neon-orange",
+    tierBorderHex: "rgba(255,107,43,0.2)",
+    tierAccentRgb: "255,107,43",
+  },
+  {
+    title: "Data Engineer",
+    blurb: "Owns the pipelines behind our data products. Strong SQL/Python, comfortable with dbt, Dagster, and Snowflake — and accountable for the reliability and quality of what they ship.",
     tier: "TRIPLE CROWN",
     tierColor: "text-neon-orange",
     tierBorderHex: "rgba(255,107,43,0.2)",
