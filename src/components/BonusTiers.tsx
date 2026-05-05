@@ -7,6 +7,17 @@ const tiers = [
     name: "TRIPLE CROWN",
     bonus: "$50,000",
     color: "neon-yellow",
+    description: "Our three highest-priority PM roles. Rare, high-impact, and worth every penny.",
+    roles: [
+      "Product Manager, AI",
+      "Product Manager, Analytics",
+      "Product Manager, Verticals",
+    ],
+  },
+  {
+    name: "TRIFECTA",
+    bonus: "$30,000",
+    color: "neon-orange",
     description: "The roles we're pushing hardest right now. Hardest to fill, biggest impact.",
     roles: [
       "Senior Software Engineer",
@@ -23,17 +34,6 @@ const tiers = [
     ],
     highlight: "Manager, Engagement Management, Enterprise",
     highlightLink: "https://www.tryprofound.com/careers/15aa928a-2849-49e4-bef3-a4fc5e9a5a4c?from=careers",
-  },
-  {
-    name: "TRIFECTA",
-    bonus: "$30,000",
-    color: "neon-orange",
-    description: "Our three highest-priority PM roles. Rare, high-impact, and worth every penny.",
-    roles: [
-      "Product Manager, AI",
-      "Product Manager, Analytics",
-      "Product Manager, Verticals",
-    ],
   },
   {
     name: "DERBY WINNER",
