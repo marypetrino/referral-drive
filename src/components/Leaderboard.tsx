@@ -123,7 +123,7 @@ function MobileCard({ entry, rank }: { entry: LeaderboardEntry; rank: number }) 
       </div>
       <div className="grid grid-cols-3 gap-2 text-center">
         {[
-          { label: "INIT SCR", val: entry.at_ips },
+          { label: "INITIAL", val: entry.at_ips },
           { label: "VIRTUAL", val: entry.at_hms },
           { label: "ONSITE", val: entry.at_panel },
           { label: "FINAL", val: entry.at_final },
@@ -187,7 +187,7 @@ export default function Leaderboard() {
                 <span>RANK</span>
                 <span className="col-span-2">NAME</span>
                 <span className="text-center">TOTAL</span>
-                <span className="text-center">INIT SCR</span>
+                <span className="text-center">INITIAL</span>
                 <span className="text-center">VIRTUAL</span>
                 <span className="text-center">ONSITE</span>
                 <span className="text-center">FINAL</span>
