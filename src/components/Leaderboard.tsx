@@ -123,12 +123,12 @@ function MobileCard({ entry, rank }: { entry: LeaderboardEntry; rank: number }) 
       </div>
       <div className="grid grid-cols-3 gap-2 text-center">
         {[
-          { label: "INITIAL", val: entry.at_ips },
-          { label: "SKILLS", val: entry.at_hms },
-          { label: "TAKE HOME", val: entry.at_panel },
-          { label: "ONSITE", val: entry.at_final },
+          { label: "INIT SCR", val: entry.at_ips },
+          { label: "VIRTUAL", val: entry.at_hms },
+          { label: "ONSITE", val: entry.at_panel },
+          { label: "FINAL", val: entry.at_final },
           { label: "REFS", val: entry.at_offer },
-          { label: "HIRED", val: entry.hires },
+          { label: "OFFER", val: entry.hires },
         ].map((s) => (
           <div key={s.label} className="bg-arcade-dark rounded p-2">
             <div className="text-white text-sm font-bold"><AnimatedNumber value={s.val} /></div>
@@ -187,12 +187,12 @@ export default function Leaderboard() {
                 <span>RANK</span>
                 <span className="col-span-2">NAME</span>
                 <span className="text-center">TOTAL</span>
-                <span className="text-center">INITIAL</span>
-                <span className="text-center">SKILLS</span>
-                <span className="text-center">PANEL</span>
+                <span className="text-center">INIT SCR</span>
+                <span className="text-center">VIRTUAL</span>
                 <span className="text-center">ONSITE</span>
+                <span className="text-center">FINAL</span>
                 <span className="text-center">REFS</span>
-                <span className="text-center">HIRED</span>
+                <span className="text-center">OFFER</span>
               </div>
               {entries.map((entry, i) => {
                 const rank = i + 1;
