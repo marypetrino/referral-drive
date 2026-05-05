@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const tiers = [
   {
-    name: "TRIFECTA",
+    name: "TRIPLE CROWN",
     bonus: "$50,000",
     color: "neon-yellow",
     description: "The roles we're pushing hardest right now. Hardest to fill, biggest impact.",
@@ -25,7 +25,7 @@ const tiers = [
     highlightLink: "https://www.tryprofound.com/careers/15aa928a-2849-49e4-bef3-a4fc5e9a5a4c?from=careers",
   },
   {
-    name: "TRIPLE CROWN",
+    name: "TRIFECTA",
     bonus: "$30,000",
     color: "neon-orange",
     description: "Our three highest-priority PM roles. Rare, high-impact, and worth every penny.",
