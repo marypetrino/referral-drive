@@ -186,10 +186,10 @@ export default function Leaderboard() {
               <div className="grid grid-cols-10 gap-2 px-4 py-3 border-b border-january-blue/20 text-[10px] pixel-heading text-muted">
                 <span>RANK</span>
                 <span className="col-span-2">NAME</span>
-                <span className="text-center">REFERRALS</span>
+                <span className="text-center">TOTAL</span>
                 <span className="text-center">INITIAL</span>
                 <span className="text-center">SKILLS</span>
-                <span className="text-center">TAKE HOME</span>
+                <span className="text-center">PANEL</span>
                 <span className="text-center">ONSITE</span>
                 <span className="text-center">REFS</span>
                 <span className="text-center">HIRED</span>
