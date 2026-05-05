@@ -145,11 +145,7 @@ export default function Leaderboard() {
   const [updatedAt, setUpdatedAt] = useState<string>("");
   const [isEmpty, setIsEmpty] = useState(true);
 
-  const enabled = process.env.NEXT_PUBLIC_LEADERBOARD_ENABLED === "true";
-
   useEffect(() => {
-    if (!enabled) return;
-
     fetch("/api/leaderboard")
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -164,7 +160,7 @@ export default function Leaderboard() {
         console.error("Leaderboard fetch failed:", err);
         setIsEmpty(true);
       });
-  }, [enabled]);
+  }, []);
 
   return (
     <section className="py-16 sm:py-24 px-4" id="leaderboard">
@@ -181,7 +177,7 @@ export default function Leaderboard() {
           <p className="text-white/70 text-sm">Who&apos;s heating up?</p>
         </motion.div>
 
-        {!enabled || isEmpty ? (
+        {isEmpty ? (
           <ComingSoon />
         ) : (
           <>
